@@ -1,0 +1,35 @@
+.section-blog-title {
+    
+    margin-top: 130px;
+}
+nav.nav.menu-review {
+    float: right;
+    /* border-left: 1px solid #000; */
+    margin-right: 10%;
+}
+
+a.nav-link.button-review {
+    border-right: 1px solid #000;
+    color: #333;
+    padding: 7px 14px;
+    margin-left: 5px;
+    font-size: 12px;
+    font-weight: 600;
+}
+.our_review {
+    background: #eef1f2 none repeat scroll 0 0;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    display: grid;
+}
+.col-xs-12.col-sm-12.col-md-12.col-lg-12 {
+    padding: 0px;
+}
+.nav{
+  display: block;
+}
+a.nav-link.active.button-review {
+    border-left: 1px solid #000;
+    margin-left: -15px;
+    padding-left: 40px;
+}
