@@ -7,8 +7,12 @@
                     <li style="background: url(&quot;assets/img/bg/slide1.jpg&quot;) center center no-repeat; width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; z-index: 2;" class="flex-active-slide">
                         <div class="slider-info">
                             <h1>Welcome to TOP</h1>
+<<<<<<< HEAD
                             <p>We provide for the best experience in Da Nang.<br />
                             TOP tour & travel. Mang Đà Nẵng đến bên bạn.</p>
+=======
+                            <p>We provide for the best experience in Da Nang.<br />TOP tour & travel. Mang Đà Nẵng đến bên bạn.</p>
+>>>>>>> 6770db3c9500bc001b5f5788090f9886cb309673
                             <a href="#special_package" class="btn btn-default btn-home-bg">Review</a>                       
                         </div>
                     </li>           
@@ -636,8 +640,15 @@
 <!-- END CONTACT FORM -->	
 
 <!-- START MAP -->
+<<<<<<< HEAD
 <div id="map"></div>
 
+=======
+<!-- <div id="map"></div> -->
+<!-- START MAP -->
+<div id="map"></div>
+<!-- END MAP -->
+>>>>>>> 6770db3c9500bc001b5f5788090f9886cb309673
 <!-- END MAP -->
 
 

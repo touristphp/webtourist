@@ -82,7 +82,11 @@
                         <a class="nav-item nav-link" href="#service">Service</a>
                         <a class="nav-item nav-link" href="#special_package">Package</a>
                         <a class="nav-item nav-link" href="#top_deals">Top place</a>
+<<<<<<< HEAD
                         <a class="nav-item nav-link" href="#blog">Gallery</a>
+=======
+                        <a class="nav-item nav-link" href="#deals_discount">Gallery</a>
+>>>>>>> 6770db3c9500bc001b5f5788090f9886cb309673
                         <a class="nav-item nav-link" href="#blog">Review</a></li>
                         <!-- <a class="nav-item nav-link" href="#blog">Contact</a></li> -->
                         <a class="nav-item nav-link" href="#">Login</a></li>
