@@ -24,6 +24,11 @@
 <script src="assets/js/jquery.stellar.min.js"></script>
 <!-- countTo js -->
 <script src="assets/js/jquery.inview.min.js"></script>  
+<!-- video scripts -->
+<script src="assets/js/jquery.mb.YTPlayer.min.js"></script>	
+<script type="text/javascript">
+	$('.player').mb_YTPlayer();
+</script>
 <!-- jquery flexslider min js -->
 <script src="assets/js/jquery.flexisel.js"></script>
 <script src="assets/js/jquery.flexslider-min.js"></script>              

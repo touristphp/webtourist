@@ -1019,23 +1019,11 @@ text-transform: uppercase;
 margin-top: 100px;  
 }
 
-.blog_content{
-background: #fcfcfc none repeat scroll 0 0;
-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
-margin-bottom: 40px;
-padding: 20px;  
-}
-.date{
-color: #f9461d;
-font-weight: 400;
-margin-bottom: 15px;  
-}
-.title{
-font-size: 26px;
-font-weight: 400;
-margin-bottom: 20px;
-text-transform: uppercase;
-}
+.blog_content{background: #eef1f2 none repeat scroll 0 0;box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);margin-bottom: 40px;padding: 20px;}
+
+.date{color: #f9461d;font-weight: 400;margin-bottom: 15px;}
+.title{font-size: 26px;font-weight: 400;color: #f9461d;margin-bottom: 20px;text-transform: uppercase;}
+
 .blog_content h4{margin-bottom: 15px;}
 .blog_content h4 span{
 font-size: 16px;
