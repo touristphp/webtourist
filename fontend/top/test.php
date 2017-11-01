@@ -42,15 +42,17 @@
       <![endif]-->
   </head>
   
-<body data-spy="scroll" data-offset="80" data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
+ <body data-spy="scroll" data-offset="80">
 
 		<!-- START PRELOADER -->
-		<div class="preloader" style="display: none;">
-			<div class="status" style="display: none;">
+		<div class="preloader">
+			<div class="status">
 				<div class="status-mes"></div>
 			</div>
 		</div>
-<!-- START NAVBAR -->
+		<!-- END PRELOADER -->		
+
+		<!-- START NAVBAR -->
 		  <nav class="navbar navbar-toggleable-sm fixed-top navbar-light bg-faded site-navigation">
 			<div class="container">
 			  <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" alt=""></a>          
@@ -72,8 +74,6 @@
 			</div>
 		  </nav>     
 		<!-- END NAVBAR -->
-
-		<!-- START HOME -->
 		<section id="home" class="home_parallax" style="background-image: url(assets/img/bg/youtube-bg.jpg);  background-size:cover; background-position: center center;">			
 			<a class="player" data-property="{videoURL:'https://youtu.be/f7MskKkn2Jg',containment:'#home', showControls:false, autoPlay:true, loop:true, mute:true, startAt:0, opacity:1, quality:'default'}"></a>
 			<div class="container">
@@ -135,12 +135,25 @@
 <!-- END CONTACT FORM -->
 
 		  <div id="map"></div>
+		  <!-- START FOOTER -->
+		<div class="footer">
+			<div class="container">
+				<div class="row">					
+					<div class="col-xs-12 text-center">
+						<div class="copyright">
+							<p>Copyright &copy; 2017 |  All Rights Reserved.</p>
+						</div><!--- END FOOTER COPYRIGHT -->
+					</div><!--- END COL -->			
+				</div><!--- END ROW -->				
+			</div><!--- END CONTAINER -->
+		</div>
+		<!-- END FOOTER -->	
 <!-- Latest jQuery -->
-			<script src="assets/js/jquery-1.12.4.min.js"></script>
+			<script src="assets/js/jquery.min.js"></script>
 		<!-- Latest compiled and minified Bootstrap -->
 			<script src="assets/bootstrap/js/bootstrap.min.js"></script>
 		<!-- modernizer JS -->		
-			<script src="assets/js/modernizr-2.8.3.min.js"></script>																	
+			<script src="assets/js/modernizr.2.5.3.min.js"></script>																	
 		<!-- owl-carousel min js  -->
 			<script src="assets/owlcarousel/js/owl.carousel.min.js"></script>
 		<!-- stellar js -->

@@ -1,39 +1,21 @@
 <?php include_once 'header.php';?>
 
 <!-- START HOME -->
-        <section id="home" class="home-area">   
-            <div id="home-slider" class="flexslider text-center loading">
-                <ul class="slides">
-                    <li style="background: url(&quot;assets/img/bg/slide1.jpg&quot;) center center no-repeat; width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; z-index: 2;" class="flex-active-slide">
-                        <div class="slider-info">
-                            <h1>Welcome to TOP</h1>
-<<<<<<< HEAD
-                            <p>We provide for the best experience in Da Nang.<br />
-                            TOP tour & travel. Mang Đà Nẵng đến bên bạn.</p>
-=======
-                            <p>We provide for the best experience in Da Nang.<br />TOP tour & travel. Mang Đà Nẵng đến bên bạn.</p>
->>>>>>> 6770db3c9500bc001b5f5788090f9886cb309673
-                            <a href="#special_package" class="btn btn-default btn-home-bg">Review</a>                       
-                        </div>
-                    </li>           
-                    <li style="background: url('assets/img/bg/slide2.jpg') no-repeat center center;">
-                        <div class="slider-info">
-                            <h1>We make awesome Da Nang</h1>
-                            <p>Tất cả các trải nhiệm thú vị được mọi người chia sẽ cùng nhau. <br />TOP tour & travel. Nơi chia sẻ cảm xúc.</p>
-                            <a href="#special_package" class="btn btn-default btn-home-bg">Review</a>                                       
-                        </div>
-                    </li>           
-                    <li style="background: url('assets/img/bg/slide3.jpg') no-repeat center center;">
-                        <div class="slider-info">
-                            <h1>Find your friend today</h1>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br />TOP tour & travel. Nơi giao lưu kết bạn.</p>
-                            <a href="#special_package" class="btn btn-default btn-home-bg">Review</a>                       
-                        </div>
-                    </li>
-                </ul>
-            </div>          
-        </section>
-        <!-- END  HOME DESIGN -->  
+<section id="home" class="home_parallax" style="background-image: url(assets/img/bg/youtube-bg.jpg);  background-size:cover; background-position: center center;">			
+			<a class="player" data-property="{videoURL:'https://youtu.be/f7MskKkn2Jg',containment:'#home', showControls:false, autoPlay:true, loop:true, mute:true, startAt:0, opacity:1, quality:'default'}"></a>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+				<div class="hero-text">
+					<h1>We make awesome tours</h1>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br />Lorem Ipsum has been the industry's standard .</p>
+					<a href="#special_package" class="btn btn-default btn-home-bg">Find tour</a>						
+				</div>
+			</div><!--- END COL -->			  
+		</div><!--- END ROW -->
+	</div><!--- END CONTAINER -->
+</section>
+		<!-- END  HOME DESIGN --> 
 
 <!-- START SERVICES -->
 <section id="service" class="our_services">
@@ -640,15 +622,7 @@
 <!-- END CONTACT FORM -->	
 
 <!-- START MAP -->
-<<<<<<< HEAD
 <div id="map"></div>
-
-=======
-<!-- <div id="map"></div> -->
-<!-- START MAP -->
-<div id="map"></div>
-<!-- END MAP -->
->>>>>>> 6770db3c9500bc001b5f5788090f9886cb309673
 <!-- END MAP -->
 
 

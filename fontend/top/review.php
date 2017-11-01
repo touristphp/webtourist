@@ -62,7 +62,7 @@
 					<img src="assets/img/blog/1.jpg" class="img-responsive" alt="image">
 					<p>Lorem ipsum dosectetur adipisicing elit, sed doLorem ipsum dolor sit amet, consectetur Nulla fringilla purus at leo dignissim congue. Mauris elementum accumsan leo vel tempo Sit amet cursus nisl aliquam. Aliquam et elit eu nunc rhoncus viverra quis at felis. Seddo Lorem ipsum dolor sit amet, consectetur Nulla fringilla purus Lorem ipsum dosectetur a dipisicing elit at leo dignissim congue.</p>
 
-					<h4  data-aos="fade-up"><span class="date">25.07.2017</span> <span><i 
+					<h4 data-aos="fade-up"><span class="date">25.07.2017</span> <span><i class="material-icons">thumb_up</i> 177 Likes </span></h4> 
 				</div>
 			</div>
 		</div>
