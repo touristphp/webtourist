@@ -1,19 +1,6 @@
 <?php include_once 'header.php';?>
 <!-- start video background -->
-<section id="home" class="home_parallax" style="background-image: url(assets/img/bg/youtube-bg.jpg);  background-size:cover; background-position: center center;">
-			<a class="player" data-property="{videoURL:'https://youtu.be/f7MskKkn2Jg',containment:'#home', showControls:false, autoPlay:true, loop:true, mute:true, startAt:0, opacity:1, quality:'default'}"></a>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 text-center">
-				<div class="hero-text">
-					<h1>We make awesome tours</h1>
-					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br />Lorem Ipsum has been the industry's standard .</p>
-					<a href="#special_package" class="btn btn-default btn-home-bg">Find tour</a>
-				</div>
-			</div><!--- END COL -->
-		</div><!--- END ROW -->
-	</div><!--- END CONTAINER -->
-</section>
+
 		<!-- end background video -->
 <div class="container">
 	<div class="row">
@@ -23,9 +10,28 @@
 				<span></span>
 			</div>
 		</div>
+		<dl class="item_info_dl">
+			<dt class="article-info-term"></dt>
+						<dd>
+				<address class="item_createdby">
+					by Super User				</address>
+			</dd>
+									<dd>
+				<div class="item_category-name">
+					in <a href="/joomla_64728/index.php/blog">Blog</a>				</div>
+			</dd>
+						<dd>
+				<time datetime="2017-10-12 10:49" class="item_published">
+					on 12 October 2017				</time>
+			</dd>
+						<dd>
+				<div class="item_hits">
+					Hits: 15				</div>
+			</dd>
+					</dl>
 	</div>
 	<div class="row text-center">
-		<div class="col-md-12">
+		<div class="col-lg-12">
 			<img data-aos="fade-up" src="assets/img/info/3.jpg">
 			<div style="text-align: justify;">
 				<p>
