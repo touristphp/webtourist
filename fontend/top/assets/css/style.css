@@ -246,6 +246,7 @@ transition: all 0.5s ease 0s;
 }
 .site-navigation {
     border-radius: 0px;
+    background-color: black;
 }
 .navbar-fixed {
     z-index: 99999;
@@ -1401,9 +1402,7 @@ transition: all 0.2s ease 0s;
 * 14.START FOOTER DESIGN
 * ----------------------------------------------------------------------------------------
 */
-.footer {
-padding: 30px 0;
-}
+.footer {padding: 30px 0;background-color: #fff;}
 
 .footer_social {
 left: 0;
