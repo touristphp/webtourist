@@ -1,4 +1,4 @@
-
+<?php include 'header.php'; ?>
 
 		<!-- START SERVICES -->
 		<section id="service" class="our_services">
