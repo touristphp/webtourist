@@ -1,7 +1,5 @@
 <?php include_once 'header.php';?>
-<!-- start video background -->
-
-		<!-- end background video -->
+<?php include_once 'index_slideshow.php';?>
 <div class="container">
 	<div class="row">
 		<div class="col-md-12 text-center">
