@@ -39,8 +39,11 @@
 <!-- aos js -->
 <script src="assets/js/aos.js"></script>
 <!-- map js -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwIQh7LGryQdDDi-A603lR8NqiF3R_ycA"></script>             
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwIQh7LGryQdDDi-A603lR8NqiF3R_ycA"></script>
+
 <!-- scripts js -->
 <script src="assets/js/scripts.js"></script>
+<!-- script by Thanh -->
+<script  src="assets/js/index.js"></script>
 </body>
 </html>
