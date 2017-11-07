@@ -1,6 +1,4 @@
 <?php include 'header.php'; ?>
-  
-
   <div class="logmod ">
   <div class="logmod__wrapper">
     <span class="logmod__close">Close</span>
