@@ -1,13 +1,14 @@
 <?php include_once 'header.php';?>
 <?php
-require_once '../../backend/controller/BlogController.php';
+require_once '../controller/BlogController.php';
 class Review{
 	public function getContextBlog(){
 		$blog = new BlogController();
 		return $blog->getContent();
 	}
 }
-//$blogObject = new Review();
+$blogObject = new Review();
+$title = new BlogController();
 ?>
 <!-- START TITLE TOP -->
 
@@ -66,7 +67,7 @@ class Review{
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" data-aos="fade-up" >
 				<div class="blog_content">
 					
-					<h1 class="title"></h1>
+					<h1 class="title"><?php echo $title->getTitle(0);?></h1>
 
 					<img src="assets/img/blog/1.jpg" class="img-responsive" alt="image">
 					<p>Lorem ipsum dosectetur adipisicing elit, sed doLorem ipsum dolor sit amet, consectetur Nulla fringilla purus at leo dignissim congue. Mauris elementum accumsan leo vel tempo Sit amet cursus nisl aliquam. Aliquam et elit eu nunc rhoncus viverra quis at felis. Seddo Lorem ipsum dolor sit amet, consectetur Nulla fringilla purus Lorem ipsum dosectetur a dipisicing elit at leo dignissim congue.</p>

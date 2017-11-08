@@ -1,7 +1,7 @@
 <?php
 
 include 'UserController.php';
-include '../database/ConnectDatabase.php';
+include 'database/ConnectDatabase.php';
 
 /**
  * Created by PhpStorm.
@@ -81,6 +81,21 @@ class BlogController extends ConnectDatabase
             }
         }
         return $this->image;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTitle($id=0)
+    {
+        $valueFormQuery = $this->getArrayData();
+        foreach ($valueFormQuery as $key =>  $value){
+
+            if ($key=="0"){
+                $this->title = $value['title'];
+            }
+        }
+        return $this->title;
     }
 
 
