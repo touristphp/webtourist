@@ -7,9 +7,9 @@
 			<div class="row">
 				<div class="col-md-12 text-center">
 				<div class="hero-text">
-					<h1>We make awesome tours</h1>
-					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br />Lorem Ipsum has been the industry's standard .</p>
-					<a href="#special_package" class="btn btn-default btn-home-bg">Find tour</a>						
+					<h1>Welcome to Da Nang City.</h1>
+					<p>Top tourist, nơi chia sẽ cảm xúc và khám phá những địa điểm du lịch hấp dẫn. <br />Hãy để những trải nghiệm được lưu giữ nơi đây.</p>
+					<a href="#special_package" class="btn btn-default btn-home-bg">Find place</a>						
 				</div>
 			</div><!--- END COL -->			  
 		</div><!--- END ROW -->

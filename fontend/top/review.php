@@ -1,5 +1,14 @@
 <?php include_once 'header.php';?>
-
+<?php
+require_once '../../backend/controller/BlogController.php';
+class Review{
+	public function getContextBlog(){
+		$blog = new BlogController();
+		return $blog->getContent();
+	}
+}
+//$blogObject = new Review();
+?>
 <!-- START TITLE TOP -->
 
 <section class="section-content section-padding" style="background-image: url(assets/img/bg/partner-bg.jpg);  background-size:cover; background-position: center center;">
@@ -57,12 +66,12 @@
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" data-aos="fade-up" >
 				<div class="blog_content">
 					
-					<h1 class="title">creativity is intelligence having fun</h1>
-					
+					<h1 class="title"></h1>
+
 					<img src="assets/img/blog/1.jpg" class="img-responsive" alt="image">
 					<p>Lorem ipsum dosectetur adipisicing elit, sed doLorem ipsum dolor sit amet, consectetur Nulla fringilla purus at leo dignissim congue. Mauris elementum accumsan leo vel tempo Sit amet cursus nisl aliquam. Aliquam et elit eu nunc rhoncus viverra quis at felis. Seddo Lorem ipsum dolor sit amet, consectetur Nulla fringilla purus Lorem ipsum dosectetur a dipisicing elit at leo dignissim congue.</p>
 
-					<h4 data-aos="fade-up"><span class="date">25.07.2017</span> <span><i class="material-icons">thumb_up</i> 177 Likes </span></h4> 
+					<h4 data-aos="fade-up"><span class="date">25.07.2017</span> <span><i class="material-icons">thumb_up</i> 177 Like </span></h4> 
 				</div>
 			</div>
 		</div>
@@ -79,7 +88,7 @@
 					<img src="assets/img/blog/2.jpg" class="img-responsive" alt="image">
 					<p>Lorem ipsum dosectetur adipisicing elit, sed doLorem ipsum dolor sit amet, consectetur Nulla fringilla purus at leo dignissim congue. Mauris elementum accumsan leo vel tempo Sit amet cursus nisl aliquam. Aliquam et elit eu nunc rhoncus viverra quis at felis. Seddo Lorem ipsum dolor sit amet, consectetur Nulla fringilla purus Lorem ipsum dosectetur a dipisicing elit at leo dignissim congue.</p>
 
-					<h4 data-aos="fade-up"><span class="date">25.07.2017</span> <span><i class="material-icons">thumb_up</i> 17 Likes </span></h4>
+					<h4 data-aos="fade-up"><span class="date">25.07.2017</span> <span><i class="material-icons">thumb_up</i> 17 Like </span></h4>
 				</div>
 			</div>
 		</div>
@@ -95,7 +104,7 @@
 					<img src="assets/img/blog/3.jpg" class="img-responsive" alt="image">
 					<p> Lorem ipsum dosectetur adipisicing elit, sed doLorem ipsum dolor sit amet, consectetur Nulla fringilla purus at leo dignissim congue. Mauris elementum accumsan leo vel tempo Sit amet cursus nisl aliquam. Aliquam et elit eu nunc rhoncus viverra quis at felis. Seddo Lorem ipsum dolor sit amet, consectetur Nulla fringilla purus Lorem ipsum dosectetur a dipisicing elit at leo dignissim congue.</p>
 
-					<h4 data-aos="fade-up"><span class="date">25.07.2017</span> <span><i class="material-icons">thumb_up</i> 77 Likes </span></h4>
+					<h4 data-aos="fade-up"><span class="date">25.07.2017</span> <span><i class="material-icons">thumb_up</i> 77 Like </span></h4>
 				</div>
 			</div>
 		</div>
