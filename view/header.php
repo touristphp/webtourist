@@ -15,11 +15,9 @@
 
     <!-- Google Font -->
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400,400i,600,600i,700,700i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
-
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
     <!--ytp player-->
@@ -28,15 +26,18 @@
     <link rel="stylesheet" href="assets/owlcarousel/css/owl.carousel.css">
     <link rel="stylesheet" href="assets/owlcarousel/css/owl.theme.css">
     <!--Flex slider-->
-    <link rel="stylesheet"   href="assets/css/flexslider.css">
+    <link rel="stylesheet" href="assets/css/flexslider.css">
     <!-- component CSS -->
     <link rel="stylesheet" href="assets/css/aos.css">
     <!-- Style CSS -->
-
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/quy.css">
     <link rel="stylesheet" href="assets/css/review.css">
-
+     <!-- start link by Thanh -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="assets/css/login.css">
+    <!-- end link by thanh -->
+    <link rel="stylesheet" href="assets/css/info.css">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -91,9 +92,10 @@
                         <a class="nav-item nav-link" href="#deals_discount">Gallery</a>
                         <a class="nav-item nav-link" href="#blog">Review</a></li>
                         <!-- <a class="nav-item nav-link" href="#blog">Contact</a></li> -->
-                        <a class="nav-item nav-link" href="#">Login</a></li>
+                        <a class="nav-item nav-link" href="login.php">Login</a></li>
                     </div>
                 </div>
             </div>
         </nav>
         <!-- END NAVBAR -->
+
