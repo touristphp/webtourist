@@ -44,12 +44,14 @@ class BlogController extends ConnectDatabase
     /**
      * @return mixed
      */
-    public function getContent()
+    public function getContent($id=0)
     {
-        $rows = $this->getConnect()->query("SELECT content FROM blog");
+        $valueFormQuery = $this->getArrayData();
+        foreach ($valueFormQuery as $key =>  $value){
 
-        foreach ($rows as  $value){
-            $this->content = $value[0];
+            if ($key==$id){
+                $this->content = $value['content'];
+            }
         }
         return $this->content;
     }
@@ -58,12 +60,20 @@ class BlogController extends ConnectDatabase
     /**
      * @return mixed
      */
-    public function getCreatedAt()
+    public function getCreatedAt($id=0)
     {
-        $valueFormQuery = $this->getConnect()->query("SELECT created_at FROM blog");
-        foreach ($valueFormQuery as  $value){
-            $this->createdAt = $value[0];
+        $valueFormQuery = $this->getArrayData();
+        foreach ($valueFormQuery as $key =>  $value){
+            if ($key==$id){
+                $this->createdAt = date("d-m-Y", strtotime($value['created_at']));
+            }
         }
+//        $valueFormQuery = $this->getConnect()->query("SELECT created_at FROM blog");
+//        foreach ($valueFormQuery as  $value){
+//            $this->createdAt = $value[0];
+//        }
+
+
         return $this->createdAt;
     }
 
@@ -91,7 +101,7 @@ class BlogController extends ConnectDatabase
         $valueFormQuery = $this->getArrayData();
         foreach ($valueFormQuery as $key =>  $value){
 
-            if ($key=="0"){
+            if ($key==$id){
                 $this->title = $value['title'];
             }
         }
@@ -102,8 +112,8 @@ class BlogController extends ConnectDatabase
 }
 $aa = new BlogController();
 
-echo $aa->getContent();
+//echo $aa->getContent();
 echo $aa->getCreatedAt();
-echo $aa->getImage(0);
+echo $aa->getTitle(1);
 
 
