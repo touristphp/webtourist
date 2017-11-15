@@ -42,3 +42,26 @@ i.material-icons {
 a.nav-link.active.button-review {
     color: #f9461d  !important;
 }
+#title{
+    background: #fff none repeat scroll 0 0;
+}
+#content{
+    background: #fff none repeat scroll 0 0;
+    border-color: currentcolor currentcolor #eee;
+    border-style: none none solid;
+    border-width: 0 0 1px;
+    border-radius: 3px;
+    box-shadow: none;
+    padding: 10px;
+    color: #333;
+    height: 100px;
+}
+.create-blog {
+    margin-top: 25px;
+    border-radius: 5px;
+}
+
+input#submitBlog {
+    width: 40%;
+    float: right;
+}
