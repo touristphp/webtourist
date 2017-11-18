@@ -359,7 +359,7 @@
 						<img src="view/assets/img/portfolio/1.jpg" alt=""/>
 						<figcaption>
 							<h4>Beautifull Place</h4>
-							<p><a href="tour-details.html">place detail</a></p>
+							<p><a href="view/info.php">place detail</a></p>
 						</figcaption>			
 					</figure>
 				</div><!--- END GRID -->
@@ -370,7 +370,7 @@
 						<img src="view/assets/img/portfolio/2.jpg" alt=""/>
 						<figcaption>
 							<h4>Beautifull Place</h4>
-							<p><a href="tour-details.html">place detail</a></p>
+							<p><a href="view/info.php">place detail</a></p>
 						</figcaption>			
 					</figure>
 				</div><!--- END GRID -->
@@ -381,7 +381,7 @@
 						<img src="view/assets/img/portfolio/3.jpg" alt=""/>
 						<figcaption>
 							<h4>Beautifull Place</h4>
-							<p><a href="tour-details.html">place detail</a></p>
+							<p><a href="view/info.php">place detail</a></p>
 						</figcaption>			
 					</figure>
 				</div><!--- END GRID -->
@@ -392,7 +392,7 @@
 						<img src="view/assets/img/portfolio/4.jpg" alt=""/>
 						<figcaption>
 							<h4>Beautifull Place</h4>
-							<p><a href="tour-details.html">place detail</a></p>
+							<p><a href="view/info.php">place detail</a></p>
 						</figcaption>			
 					</figure>
 				</div><!--- END GRID -->
@@ -403,7 +403,7 @@
 						<img src="view/assets/img/portfolio/5.jpg" alt=""/>
 						<figcaption>
 							<h4>Beautifull Place</h4>
-							<p><a href="tour-details.html">place detail</a></p>
+							<p><a href="view/info.php">place detail</a></p>
 						</figcaption>			
 					</figure>
 				</div><!--- END GRID -->
@@ -414,7 +414,7 @@
 						<img src="view/assets/img/portfolio/6.jpg" alt=""/>
 						<figcaption>
 							<h4>Beautifull Place</h4>
-							<p><a href="tour-details.html">place detail</a></p>
+							<p><a href="view/info.php">place detail</a></p>
 						</figcaption>			
 					</figure>
 				</div><!--- END GRID -->

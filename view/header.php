@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="assets/css/aos.css">
     <!-- Style CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" href="assets/css/quy.css">
     <link rel="stylesheet" href="assets/css/review.css">
      <!-- start link by Thanh -->

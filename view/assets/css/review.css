@@ -1,6 +1,5 @@
 .section-blog-title {
-    
-    margin-top: 130px;
+    margin-top: 190px;
 }
 nav.nav.menu-review {
     float: right;
@@ -64,4 +63,7 @@ a.nav-link.active.button-review {
 input#submitBlog {
     width: 40%;
     float: right;
+}
+#first-email, #subject  {
+    width: 94%; 
 }

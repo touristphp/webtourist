@@ -85,9 +85,8 @@ class BlogController extends ConnectDatabase
         $valueFormQuery = $this->getArrayData();
         foreach ($valueFormQuery as $key =>  $value){
 
-            if ($key=="0"){
+            if ($key==$id){
                 $this->image = $value['image'];
-//                echo $key;
             }
         }
         return $this->image;
@@ -110,10 +109,10 @@ class BlogController extends ConnectDatabase
 
 
 }
-$aa = new BlogController();
+// $aa = new BlogController();
 
-//echo $aa->getContent();
-echo $aa->getCreatedAt();
-echo $aa->getTitle(1);
+// echo $aa->getContent();
+// echo $aa->getCreatedAt();
+// echo $aa->getTitle(1);
 
 

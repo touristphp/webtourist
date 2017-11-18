@@ -135,7 +135,7 @@ fieldset {
 }
 .no-padding { padding: 0 }
 /*END PRELOADER DESIGN*/
-.section-padding {/* padding: 60px 0; */}
+.section-padding {padding: 60px 0;}
 /*START SECTION TITLE DESIGN*/
 .section-title{margin-bottom:60px;}
 .section-title  h2 {
@@ -1131,7 +1131,7 @@ figure.effect-sadie:hover p {
     margin-right: 5px;
 }
 .btn-tag-bg {
-    background: #fff none repeat scroll 0 0;
+    /*background: #fff none repeat scroll 0 0;*/
     border: 1px solid #eee;
     border-radius: 30px;
     color: #333;

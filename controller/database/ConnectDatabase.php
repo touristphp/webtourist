@@ -8,7 +8,7 @@
  */
 abstract class ConnectDatabase
 {
-    private $url = 'mysql:host=localhost;dbname=tourist';
+    private $url = 'mysql:host=localhost;dbname=webtourist';
     private $userName = 'root';
     private $password = 'root';
 

@@ -279,7 +279,7 @@
 						<img src="assets/img/portfolio/1.jpg" alt=""/>
 						<figcaption>
 							<h4>Beautifull Place</h4>
-							<p><a href="tour-details.html">place detail</a></p>
+							<p><a href="info.php">place detail</a></p>
 						</figcaption>			
 					</figure>
 				</div><!--- END GRID -->
@@ -290,7 +290,7 @@
 						<img src="assets/img/portfolio/2.jpg" alt=""/>
 						<figcaption>
 							<h4>Beautifull Place</h4>
-							<p><a href="tour-details.html">place detail</a></p>
+							<p><a href="info.php">place detail</a></p>
 						</figcaption>			
 					</figure>
 				</div><!--- END GRID -->
@@ -301,7 +301,7 @@
 						<img src="assets/img/portfolio/3.jpg" alt=""/>
 						<figcaption>
 							<h4>Beautifull Place</h4>
-							<p><a href="tour-details.html">place detail</a></p>
+							<p><a href="info.php">place detail</a></p>
 						</figcaption>			
 					</figure>
 				</div><!--- END GRID -->
@@ -312,7 +312,7 @@
 						<img src="assets/img/portfolio/4.jpg" alt=""/>
 						<figcaption>
 							<h4>Beautifull Place</h4>
-							<p><a href="tour-details.html">place detail</a></p>
+							<p><a href="info.php">place detail</a></p>
 						</figcaption>			
 					</figure>
 				</div><!--- END GRID -->
@@ -323,7 +323,7 @@
 						<img src="assets/img/portfolio/5.jpg" alt=""/>
 						<figcaption>
 							<h4>Beautifull Place</h4>
-							<p><a href="tour-details.html">place detail</a></p>
+							<p><a href="info.php">place detail</a></p>
 						</figcaption>			
 					</figure>
 				</div><!--- END GRID -->
@@ -334,7 +334,7 @@
 						<img src="assets/img/portfolio/6.jpg" alt=""/>
 						<figcaption>
 							<h4>Beautifull Place</h4>
-							<p><a href="tour-details.html">place detail</a></p>
+							<p><a href="info.php">place detail</a></p>
 						</figcaption>			
 					</figure>
 				</div><!--- END GRID -->
@@ -413,7 +413,7 @@
 			<div class="col-lg-6" data-aos="fade-up">
 				<div class="single_blog">
 					<div class="blog-text wow fadeInLeft">
-						<h4><a href="review.php">Blog title here</a></h4>
+						<h4><a href="blog.php">Blog title here</a></h4>
 						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.
 						<p><strong> 25 August, 2017</strong></p>
 					</div>
@@ -423,7 +423,7 @@
 			<div class="col-lg-6" data-aos="fade-up">
 				<div class="single_blog">
 					<div class="blog-text wow fadeInLeft">
-						<h4><a href="review.php">Blog title here</a></h4>
+						<h4><a href="blog.php">Blog title here</a></h4>
 						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.
 						<p><strong> 26 August, 2017</strong></p>
 					</div>
@@ -433,7 +433,7 @@
 			<div class="col-lg-6" data-aos="fade-up">
 				<div class="single_blog">
 					<div class="blog-text wow fadeInRight">
-						<h4><a href="review.php">Blog title here</a></h4>
+						<h4><a href="blog.php">Blog title here</a></h4>
 						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.
 						<p><strong> 27 August, 2017</strong></p>
 					</div>
@@ -443,7 +443,7 @@
 			<div class="col-lg-6" data-aos="fade-up">
 				<div class="single_blog">
 					<div class="blog-text wow fadeInRight">
-						<h4><a href="review.php">Blog title here</a></h4>
+						<h4><a href="blog.php">Blog title here</a></h4>
 						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.
 						<p><strong> 28 August, 2017</strong></p>
 					</div>
