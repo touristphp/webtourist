@@ -1,3 +1,8 @@
+<?php
+	include_once '../controller/BlogController.php';
+	$blog = new BlogController();
+//	$blog->invoke();
+?>
 <?php include_once 'header.php';?>
 
 <!-- START HOME -->
@@ -413,7 +418,7 @@
 			<div class="col-lg-6" data-aos="fade-up">
 				<div class="single_blog">
 					<div class="blog-text wow fadeInLeft">
-						<h4><a href="blog.php">Blog title here</a></h4>
+						<h4><a href="blog.php?blog=<?php echo $blog->getId();?>">Blog of Me</a></h4>
 						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.
 						<p><strong> 25 August, 2017</strong></p>
 					</div>

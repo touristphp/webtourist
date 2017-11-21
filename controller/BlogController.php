@@ -2,6 +2,7 @@
 
 include 'UserController.php';
 include 'database/ConnectDatabase.php';
+include_once '../model/Blog.php';
 
 /**
  * Created by PhpStorm.
@@ -11,108 +12,59 @@ include 'database/ConnectDatabase.php';
  */
 class BlogController extends ConnectDatabase
 {
-    private $id;
-    private $title;
-    private $content;
-    private $createdAt;
-    private $updatedAt;
-    private $deletedAt;
-    private $image;
-    private $checkLike;
-    private $totalLike;
 
-    /**
-     * @return mixed
-     */
-    public function getConnect()
+    public $blog;
+    public  $blog_id;
+
+
+    public function __construct()
     {
-        $connect = $this->connect();
-        return $connect;
-
-    }
-    /**
-     * @return mixed
-     */
-    public function getArrayData()
-    {
-        $connect = $this->connect();
-        $data = $connect->query("SELECT * FROM blog");
-        return $data;
-
+        $this->blog = new Blog();
     }
 
-    /**
-     * @return mixed
-     */
-    public function getContent($id=0)
+    public function invoke()
     {
-        $valueFormQuery = $this->getArrayData();
-        foreach ($valueFormQuery as $key =>  $value){
+        if (!isset($_GET['blog']))
+        {
+            $blog_id = 0;
+            return $blog_id;
 
-            if ($key==$id){
-                $this->content = $value['content'];
-            }
         }
-        return $this->content;
-    }
-
-
-    /**
-     * @return mixed
-     */
-    public function getCreatedAt($id=0)
-    {
-        $valueFormQuery = $this->getArrayData();
-        foreach ($valueFormQuery as $key =>  $value){
-            if ($key==$id){
-                $this->createdAt = date("d-m-Y", strtotime($value['created_at']));
-            }
+        else
+        {
+            $blog_id = $_GET['blog'];
+            return $blog_id;
         }
-//        $valueFormQuery = $this->getConnect()->query("SELECT created_at FROM blog");
-//        foreach ($valueFormQuery as  $value){
-//            $this->createdAt = $value[0];
-//        }
-
-
-        return $this->createdAt;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getImage($id=0)
-    {
-        $valueFormQuery = $this->getArrayData();
-        foreach ($valueFormQuery as $key =>  $value){
+    public function getContent($blog_id=0){
+       $content =  $this->blog->getContent($blog_id);
+        return $content;
 
-            if ($key==$id){
-                $this->image = $value['image'];
-            }
-        }
-        return $this->image;
+    }
+    
+    public function getId($id=0){
+        $getId = $this->blog->getId($id);
+        echo $getId;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getTitle($id=0)
-    {
-        $valueFormQuery = $this->getArrayData();
-        foreach ($valueFormQuery as $key =>  $value){
-
-            if ($key==$id){
-                $this->title = $value['title'];
-            }
-        }
-        return $this->title;
+    public function getCreatedAt($id=0){
+        $getId = $this->blog->getCreatedAt($id);
+        echo $getId;
     }
 
+    public function getImage($id=0){
+        $getId = $this->blog->getImage($id);
+        echo $getId;
+    }
+
+    public function getTitle($id=0){
+        $getId = $this->blog->getTitle($id);
+        echo $getId;
+    }
 
 }
-// $aa = new BlogController();
-
-// echo $aa->getContent();
-// echo $aa->getCreatedAt();
-// echo $aa->getTitle(1);
+$aa = new BlogController();
+$aa->invoke();
 
 

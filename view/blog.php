@@ -1,14 +1,13 @@
 <?php include_once 'header.php';?>
 <?php
 require_once '../controller/BlogController.php';
-class Review{
-    public function getContextBlog(){
-        $blog = new BlogController();
-        return $blog->getContent();
-    }
-}
-$blogObject = new Review();
+//class Review{
+//
+//}
+////$blogObject = new Review();
 $blog = new BlogController();
+$urlBlogId = $blog->invoke();
+//$getId = $blog->getBlog();
 ?>
 
 
@@ -23,18 +22,18 @@ $blog = new BlogController();
             </div> -->
         </section>
         <!-- END TITLE TOP -->
-        
+
         <!-- START BLOG -->
         <section class="blog_page section-padding">
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-sm-8 col-xs-12">
                         <div class="blog_content">
-                            <h1 class="date"><?php echo $blog->getCreatedAt(0); ?></h1>
-                            <h2 class="title"><?php echo $blog->getTitle(0); ?></h2>
+                            <h1 class="date"><?php echo $blog->getCreatedAt($urlBlogId); ?></h1>
+                            <h2 class="title"><?php echo $blog->getTitle($urlBlogId); ?></h2>
                             <h4><span>03 Comments </span> <span>200 Views </span> <span>17 Likes </span></h4>
-                            <img src="<?php echo $blog->getImage(0); ?>" class="img-responsive" alt="image" />
-                            <p><?php echo $blog->getContent();?></p>
+                            <img src="<?php echo $blog->getImage($urlBlogId); ?>" class="img-responsive" alt="image" />
+                            <p><?php echo $blog->getContent($urlBlogId);?></p>
                         </div>
                         <div class="author_part">
                             <h3 class="blog_head_title">About the author</h3>
