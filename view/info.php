@@ -1,4 +1,10 @@
 <?php include_once 'header.php';?>
+<?php
+require_once '../controller/PlaceController.php';
+$place      = new PlaceController();
+$urlPlaceId = $place->invoke();
+
+?>
 <!-- video bg -->
 	<section id="home" class="home_parallax" style="background-image: url(assets/img/bg/youtube-bg.jpg);  background-size:cover; background-position: center center;">
 			<a class="player" data-property="{videoURL:'https://youtu.be/f7MskKkn2Jg',containment:'#home', showControls:false, autoPlay:true, loop:true, mute:true, startAt:0, opacity:1, quality:'default'}"></a>
@@ -20,7 +26,7 @@
 	<div class="container">
 		<div class="row section-padding ">
 			<div class="col-md-12 section-title text-center">
-				<h2>Infomation for Bana hill</h2>
+				<h2><?php echo $place->getTitle($urlPlaceId);?></h2>
 				<span></span>
 				<img src="assets/img/info/banahills.jpg" alt="avatar">
 			</div>
@@ -28,14 +34,13 @@
 		<div class="row">
 
 			<div class="col-md-12" style="text-align: justify;">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur expedita recusandae aut accusamus repellendus consequatur aperiam atque suscipit error minima, quaerat, deleniti illum hic nisi iusto dignissimos architecto? Assumenda, perferendis. ipsum dolor sit amet, consectetur adipisicing elit. Soluta commodi libero sunt, provident voluptates. Cum dignissimos a molestias? Delectus exercitationem aperiam molestiae, eum? Amet fuga laborum sapiente, facilis, adipisci delectus. ipsum dolor sit amet, consectetur adipisicing elit. Possimus soluta, tempora autem, beatae quod consectetur ad rem veniam commodi laudantium hic sit inventore fugit in nisi cum exercitationem adipisci provident. ipsum dolor sit amet, consectetur adipisicing elit. Fuga aut laudantium distinctio delectus fugit eum facere, in soluta hic, at enim voluptatum! Eos libero ipsam accusamus? Dolor beatae, harum vel. ipsum dolor sit amet, consectetur adipisicing elit. Voluptas error libero, consequuntur velit suscipit provident facere autem magni pariatur quod. Animi, dolores hic sequi nobis nihil rerum cupiditate alias ipsa. ipsum dolor sit amet, consectetur adipisicing elit. Ad veniam magni beatae earum totam eius praesentium nemo atque, quibusdam dolores adipisci, est recusandae delectus, a dignissimos, sed quis assumenda porro! ipsum dolor sit amet, consectetur adipisicing elit. Culpa voluptatibus quidem unde eligendi, sapiente aut id delectus reprehenderit architecto dolorem nostrum! Itaque aut minima et cum, assumenda quos excepturi officia.</br>
+<?php echo $place->getContentFirst($urlPlaceId);?></br>
 				<img src="assets/img/info/1.jpg" class="img_info"><br>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur expedita recusandae aut accusamus repellendus consequatur aperiam atque suscipit error minima, quaerat, deleniti illum hic nisi iusto dignissimos architecto? Assumenda, perferendis. ipsum dolor sit amet, consectetur adipisicing elit. Soluta commodi libero sunt, provident voluptates. Cum dignissimos a molestias? Delectus exercitationem aperiam molestiae, eum? Amet fuga laborum sapiente, facilis, adipisci delectus. ipsum dolor sit amet, consectetur adipisicing elit. Possimus soluta, tempora autem, beatae quod consectetur ad rem veniam commodi laudantium hic sit inventore fugit in nisi cum exercitationem adipisci provident. ipsum dolor sit amet, consectetur adipisicing elit. Fuga aut laudantium distinctio delectus fugit eum facere, in soluta hic, at enim voluptatum! Eos libero ipsam accusamus? Dolor beatae, harum vel. ipsum dolor sit amet, consectetur adipisicing elit. Voluptas error libero, consequuntur velit suscipit provident facere autem magni pariatur quod. Animi, dolores hic sequi nobis nihil rerum cupiditate alias ipsa. ipsum dolor sit amet, consectetur adipisicing elit. Ad veniam magni beatae earum totam eius praesentium nemo atque, quibusdam dolores adipisci, est recusandae delectus, a dignissimos, sed quis assumenda porro! ipsum dolor sit amet, consectetur adipisicing elit. Culpa voluptatibus quidem unde eligendi, sapiente aut id delectus reprehenderit architecto dolorem nostrum! Itaque aut minima et cum, assumenda quos excepturi officia.</br>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur expedita recusandae aut accusamus repellendus consequatur aperiam atque suscipit error minima, quaerat, deleniti illum hic nisi iusto dignissimos architecto? Assumenda, perferendis. ipsum dolor sit amet, consectetur adipisicing elit. Soluta commodi libero sunt, provident voluptates. Cum dignissimos a molestias? Delectus exercitationem aperiam molestiae, eum? Amet fuga laborum sapiente, facilis, adipisci delectus. ipsum dolor sit amet, consectetur adipisicing elit. Possimus soluta, tempora autem, beatae quod consectetur ad rem veniam commodi laudantium hic sit inventore fugit in nisi cum exercitationem adipisci provident. ipsum dolor sit amet, consectetur adipisicing elit. Fuga aut laudantium distinctio delectus fugit eum facere, in soluta hic, at enim voluptatum! Eos libero ipsam accusamus? Dolor beatae, harum vel. ipsum dolor sit amet, consectetur adipisicing elit. Voluptas error libero, consequuntur velit suscipit provident facere autem magni pariatur quod. Animi, dolores hic sequi nobis nihil rerum cupiditate alias ipsa. ipsum dolor sit amet, consectetur adipisicing elit. Ad veniam magni beatae earum totam eius praesentium nemo atque, quibusdam dolores adipisci, est recusandae delectus, a dignissimos, sed quis assumenda porro! ipsum dolor sit amet, consectetur adipisicing elit. Culpa voluptatibus quidem unde eligendi, sapiente aut id delectus reprehenderit architecto dolorem nostrum! Itaque aut minima et cum, assumenda quos excepturi officia.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur expedita recusandae aut accusamus repellendus consequatur aperiam atque suscipit error minima, quaerat, deleniti illum hic nisi iusto dignissimos architecto? Assumenda, perferendis. ipsum dolor sit amet, consectetur adipisicing elit. Soluta commodi libero sunt, provident voluptates. Cum dignissimos a molestias? Delectus exercitationem aperiam molestiae, eum? Amet fuga laborum sapiente, facilis, adipisci delectus. ipsum dolor sit amet, consectetur adipisicing elit. Possimus soluta, tempora autem, beatae quod consectetur ad rem veniam commodi laudantium hic sit inventore fugit in nisi cum exercitationem adipisci provident. ipsum dolor sit amet, consectetur adipisicing elit. Fuga aut laudantium distinctio delectus fugit eum facere, in soluta hic, at enim voluptatum! Eos libero ipsam accusamus? Dolor beatae, harum vel. ipsum dolor sit amet, consectetur adipisicing elit. Voluptas error libero, consequuntur velit suscipit provident facere autem magni pariatur quod. Animi, dolores hic sequi nobis nihil rerum cupiditate alias ipsa. ipsum dolor sit amet, consectetur adipisicing elit. Ad veniam magni beatae earum totam eius praesentium nemo atque, quibusdam dolores adipisci, est recusandae delectus, a dignissimos, sed quis assumenda porro! ipsum dolor sit amet, consectetur adipisicing elit. Culpa voluptatibus quidem unde eligendi, sapiente aut id delectus reprehenderit architecto dolorem nostrum! Itaque aut minima et cum, assumenda quos excepturi officia.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur expedita recusandae aut accusamus repellendus consequatur aperiam atque suscipit error minima, quaerat, deleniti illum hic nisi iusto dignissimos architecto? Assumenda, perferendis. ipsum dolor sit amet, consectetur adipisicing elit. Soluta commodi libero sunt, provident voluptates. Cum dignissimos a molestias? Delectus exercitationem aperiam molestiae, eum? Amet fuga laborum sapiente, facilis, adipisci delectus. ipsum dolor sit amet, consectetur adipisicing elit. Possimus soluta, tempora autem, beatae quod consectetur ad rem veniam commodi laudantium hic sit inventore fugit in nisi cum exercitationem adipisci provident. ipsum dolor sit amet, consectetur adipisicing elit. Fuga aut laudantium distinctio delectus fugit eum facere, in soluta hic, at enim voluptatum! Eos libero ipsam accusamus? Dolor beatae, harum vel. ipsum dolor sit amet, consectetur adipisicing elit. Voluptas error libero, consequuntur velit suscipit provident facere autem magni pariatur quod. Animi, dolores hic sequi nobis nihil rerum cupiditate alias ipsa. ipsum dolor sit amet, consectetur adipisicing elit. Ad veniam magni beatae earum totam eius praesentium nemo atque, quibusdam dolores adipisci, est recusandae delectus, a dignissimos, sed quis assumenda porro! ipsum dolor sit amet, consectetur adipisicing elit. Culpa voluptatibus quidem unde eligendi, sapiente aut id delectus reprehenderit architecto dolorem nostrum! Itaque aut minima et cum, assumenda quos excepturi officia. <br>
+<?php $place->getContentMid($urlPlaceId);?><br>
 				<img src="assets/img/info/2.jpg" class="img_info"> <br>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur expedita recusandae aut accusamus repellendus consequatur aperiam atque suscipit error minima, quaerat, deleniti illum hic nisi iusto dignissimos architecto? Assumenda, perferendis. ipsum dolor sit amet, consectetur adipisicing elit. Soluta commodi libero sunt, provident voluptates. Cum dignissimos a molestias? Delectus exercitationem aperiam molestiae, eum? Amet fuga laborum sapiente, facilis, adipisci delectus. ipsum dolor sit amet, consectetur adipisicing elit. Possimus soluta, tempora autem, beatae quod consectetur ad rem veniam commodi laudantium hic sit inventore fugit in nisi cum exercitationem adipisci provident. ipsum dolor sit amet, consectetur adipisicing elit. Fuga aut laudantium distinctio delectus fugit eum facere, in soluta hic, at enim voluptatum! Eos libero ipsam accusamus? Dolor beatae, harum vel. ipsum dolor sit amet, consectetur adipisicing elit. Voluptas error libero, consequuntur velit suscipit provident facere autem magni pariatur quod. Animi, dolores hic sequi nobis nihil rerum cupiditate alias ipsa. ipsum dolor sit amet, consectetur adipisicing elit. Ad veniam magni beatae earum totam eius praesentium nemo atque, quibusdam dolores adipisci, est recusandae delectus, a dignissipraesentium nemo atque, quibusdam dolores adipisci, est recusandae delectus, a dignissimos, sed quis assumenda porro! ipsum dolor sit amet, consectetur adipisicing elit. Culpa voluptatibus quidem unde eligendi, sapiente aut id delectus reprehenderit architecto dolorem nostrum! Itaque aut minima et cum, assumenda quos excepturi officia. <br>
 				<img src="assets/img/info/3.jpg" class="img_info"> <br>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur expedita recusandae aut accusamus repellendus consequatur aperiam atque suscipit error minima, quaerat, deleniti illum hic nisi iusto dignissimos architecto? Assumenda, perferendis. ipsum dolor sit amet, consectetur adipisicing elit. Soluta commodi libero sunt, provident voluptates. Cum dignissimos a molestias? Delectus exercitationem aperiam molestiae, eum? Amet fuga laborum sapiente, facilis, adipisci delectus. ipsum dolor sit amet, consectetur adipisicing elit. Possimus soluta, tempora autem, beatae quod consectetur ad rem veniam commodi laudantium hic sit inventore fugit in nisi cum exercitationem adipisci provident. ipsum dolor sit amet, consectetur adipisicing elit. Fuga aut laudantium distinctio delectus fugit eum facere, in soluta hic, at enim voluptatum! Eos libero ipsam accusamus? Dolor beatae, harum vel. ipsum dolor sit amet, consectetur adipisicing elit. Voluptas error libero, consequuntur velit suscipit provident facere autem magni pariatur quod. Animi, dolores hic sequi nobis nihil rerum cupiditate alias ipsa. ipsum dolor sit amet, consectetur adipisicing elit. Ad veniam magni beatae earum totam eius praesentium nemo atque, quibusdam dolores adipisci, est recusandae delectus, a dignissimos, sed quis assumenda porro! ipsum dolor sit amet, consectetur adipisicing elit. Culpa voluptatibus quidem unde eligendi, sapiente aut id delectus reprehenderit architecto dolorem nostrum! Itaque aut minima et cum, assumenda quos excepturi officia. <br>
+<?php echo $place->getContentEnd($urlPlaceId);?><br>
 			</div>
 
 		</div>
@@ -64,7 +69,7 @@
 				<div class="row post-comment"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas sapiente beatae architecto sit praesentium deleniti illum facere velit. Nemo, ipsum! Iste accusantium maiores aliquam in perspiciatis nihil quod necessitatibus at.</div>
 				<div class="row like-comment">
 					<button type="button" class="btn btn-outline-primary btn-sm">
-          				<span class="abc">10</span> Like</button>
+          				<span><i class="material-icons">thumb_up</i> 77 Like </span> Like</button>
 					<button type="button" class="btn btn-outline-primary btn-sm">
           <span class="abc">05</span> Unlike</button>
 				</div>
@@ -83,7 +88,7 @@
 				<div class="row post-comment"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas sapiente beatae architecto sit praesentium deleniti illum facere velit. Nemo, ipsum! Iste accusantium maiores aliquam in perspiciatis nihil quod necessitatibus at.</div>
 				<div class="row like-comment">
 					<button type="button" class="btn btn-outline-primary btn-sm">
-          				<span class="abc">10</span> Like</button>
+          				<span><i class="material-icons">thumb_up</i> 77 Like </span> Like</button>
 					<button type="button" class="btn btn-outline-primary btn-sm">
         			  <span class="abc">05</span> Unlike</button>
 				</div>
@@ -102,7 +107,7 @@
 				<div class="row post-comment"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas sapiente beatae architecto sit praesentium deleniti illum facere velit. Nemo, ipsum! Iste accusantium maiores aliquam in perspiciatis nihil quod necessitatibus at.</div>
 				<div class="row like-comment">
 					<button type="button" class="btn btn-outline-primary btn-sm">
-          				<span class="abc">10</span> Like</button>
+          				<span><i class="material-icons">thumb_up</i> 77 Like </span> Like</button>
 					<button type="button" class="btn btn-outline-primary btn-sm">
           <span class="abc">05</span> Unlike</button>
 				</div>
@@ -272,6 +277,9 @@
 	</section>
 	<!-- END SPECIAL PACKAGE -->
 </div>
+<div id="map"></div>
+
+
 <script type="text/javascript">
 	function StarRating() {
   this.init();
