@@ -47,16 +47,16 @@
       <![endif]-->
   </head>
 
+<body data-spy="scroll" data-offset="80">
 
-  <body data-spy="scroll" data-offset="80">
-
-    <!-- START PRELOADER -->
-    <div class="preloader">
-        <div class="status">
-            <div class="status-mes"></div>
+        <!-- START PRELOADER -->
+        <div class="preloader">
+            <div class="status">
+                <div class="status-mes"></div>
+            </div>
         </div>
-    </div>
-    <!-- END PRELOADER -->
+        <!-- END PRELOADER -->
+
 
     <!-- START NAVBAR -->
       <nav class="navbar navbar-toggleable-sm fixed-top navbar-light bg-faded site-navigation">
@@ -79,3 +79,4 @@
         </div>
       </div>
       </nav>
+        <!-- END NAVBAR -->
