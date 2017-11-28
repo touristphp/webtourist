@@ -10,7 +10,7 @@ include_once '../model/Blog.php';
  * Date: 07/11/2017
  * Time: 16:55
  */
-class BlogController extends ConnectDatabase
+class BlogController 
 {
 
     public $blog;

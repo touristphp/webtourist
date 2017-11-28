@@ -7,6 +7,10 @@ require_once '../controller/BlogController.php';
 ////$blogObject = new Review();
 $blog = new BlogController();
 $urlBlogId = $blog->invoke();
+$blog->getContent();
+
+session_start();
+echo $_SESSION['id'];
 //$getId = $blog->getBlog();
 ?>
 

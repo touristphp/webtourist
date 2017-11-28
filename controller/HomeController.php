@@ -1,5 +1,5 @@
 <?php
-
+require_once '../model/User.php';
 /**
  * Created by PhpStorm.
  * User: ngocquy
@@ -8,5 +8,23 @@
  */
 class HomeController
 {
+    private $user;
 
+    public function __construct()
+    {
+        $this->user = new User();
+    }
+    
+    public function register($userName, $password){
+        return $this->user->register($userName, $password);
+    }
+
+    public function login($userName, $password){
+        return $this->user->login($userName, $password);
+    }
+
+    public function redirect($url)
+    {
+        return $this->user-$this->redirect($url);
+    }
 }

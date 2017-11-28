@@ -14,6 +14,8 @@ abstract class ConnectDatabase
 
     public function connect()
     {
-        return new PDO($this->url, $this->userName, $this->password);
+        $connect = new PDO($this->url, $this->userName, $this->password);
+        $connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        return $connect;
     }
 }

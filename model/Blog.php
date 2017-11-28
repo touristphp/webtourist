@@ -55,9 +55,11 @@ class Blog extends ConnectDatabase{
   */
  public function getContent($id=0)
  {
-  $valueFormQuery = $this->getArrayData();
-  foreach ($valueFormQuery as $key =>  $value){
-
+  $testconnect = $this->connect();
+  $value = $testconnect->prepare("SELECT * FROM blog");
+  $value->execute();
+  $result = $value->fetchAll();
+  foreach ($result as $key =>  $value){
    if ($key==$id){
     $this->content = $value['content'];
    }
