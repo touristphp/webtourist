@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="assets/css/aos.css">
     <!-- Style CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" href="assets/css/quy.css">
     <link rel="stylesheet" href="assets/css/review.css">
      <!-- start link by Thanh -->
@@ -56,25 +57,26 @@
         </div>
         <!-- END PRELOADER -->
 
-        <!-- START NAVBAR -->
-          <nav class="navbar navbar-toggleable-sm fixed-top navbar-light bg-faded site-navigation">
-            <div class="container">
-              <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" alt=""></a>
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="icon-menu"></i>
-              </button>
-              <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
-                <ul class="navbar-nav">
-                  <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#service">Service</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#special_package">package</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#top_deals">Top deals</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#deals_discount">offer</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
-              </div>
-            </div>
-          </nav>
+
+    <!-- START NAVBAR -->
+      <nav class="navbar navbar-toggleable-sm fixed-top navbar-light bg-faded site-navigation">
+      <div class="container">
+        <a class="navbar-brand" href="index.php"><img src="assets/img/logo.png" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#service">Service</a></li>
+          <li class="nav-item"><a class="nav-link" href="#special_package">Package</a></li>
+          <li class="nav-item"><a class="nav-link" href="#top_deals">Top place</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="login.php">
+            Login  </a></li>
+        </ul>
+        </div>
+      </div>
+      </nav>
         <!-- END NAVBAR -->
