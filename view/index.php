@@ -1,12 +1,20 @@
 <?php
+
+
 	include_once '../controller/BlogController.php';
+	include_once '../controller/UserController.php';
+
+
 	$blog = new BlogController();
+	$user = new UserController();
+
+
 //	$blog->invoke();
 ?>
 <?php include_once 'header.php';?>
 
 <!-- START HOME -->
-<section id="home" class="home_parallax" style="background-image: url(assets/img/bg/youtube-bg.jpg);  background-size:cover; background-position: center center;">			
+<section id="home" class="home_parallax" style="background-image: url(assets/img/bg/youtube-bg.jpg);  background-size:cover; background-position: center center;">
 			<a class="player" data-property="{videoURL:'https://youtu.be/f7MskKkn2Jg',containment:'#home', showControls:false, autoPlay:true, loop:true, mute:true, startAt:0, opacity:1, quality:'default'}"></a>
 		<div class="container">
 			<div class="row">
@@ -14,13 +22,13 @@
 				<div class="hero-text">
 					<h1>Welcome to Da Nang City.</h1>
 					<p>Top tourist, nơi chia sẽ cảm xúc và khám phá những địa điểm du lịch hấp dẫn. <br />Hãy để những trải nghiệm được lưu giữ nơi đây.</p>
-					<a href="#special_package" class="btn btn-default btn-home-bg">Find place</a>						
+					<a href="#special_package" class="btn btn-default btn-home-bg">Find place</a>
 				</div>
-			</div><!--- END COL -->			  
+			</div><!--- END COL -->
 		</div><!--- END ROW -->
 	</div><!--- END CONTAINER -->
 </section>
-		<!-- END  HOME DESIGN --> 
+		<!-- END  HOME DESIGN -->
 
 <!-- START SERVICES -->
 <section id="service" class="our_services">
@@ -30,10 +38,10 @@
 				<div class="section-title">
 					<h2>TOP services</h2>
 					<span></span>
-				</div>	
+				</div>
 			</div>
 		</div>
-		<div class="row text-center">					
+		<div class="row text-center">
 			<div class="col-lg-4 col-sm-6 col-xs-12" data-aos="fade-up">
 				<div class="service">
 					<div class="icon"><i class="fa fa-bed"></i></div>
@@ -79,10 +87,10 @@
 		</div><!-- END ROW -->
 	</div><!-- END CONTAINER -->
 </section>
-<!-- END SERVICES -->	
+<!-- END SERVICES -->
 
-<!-- START WHY CHOOSE US -->	
-<section data-stellar-background-ratio="0.3" class="why_choose section-padding"  style="background-image: url(assets/img/bg/service-bg.jpg);  background-size:cover; background-position: center center;">			
+<!-- START WHY CHOOSE US -->
+<section data-stellar-background-ratio="0.3" class="why_choose section-padding"  style="background-image: url(assets/img/bg/service-bg.jpg);  background-size:cover; background-position: center center;">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12" data-aos="fade-up">
@@ -92,31 +100,31 @@
 					<p class="section-title-white">TOP Tour & Travel, được hàng triệu người trên thế giới tin tưởng.</p>
 				</div>
 			</div><!-- END COL -->
-		</div><!-- END ROW -->	
-		<div class="row text-center">		
+		</div><!-- END ROW -->
+		<div class="row text-center">
 			<div class="col-sm-4 col-xs-12" data-aos="fade-up">
 				<div class="single-choose">
 					<i class="fa fa-star"></i>
 					<h4>Handpicked Hotels</h4>
-					
+
 				</div>
 			</div><!-- END COL -->
 			<div class="col-sm-4 col-xs-12" data-aos="fade-up">
 				<div class="single-choose">
 					<i class="fa fa-globe"></i>
 					<h4>World Class Service</h4>
-					
+
 				</div>
 			</div><!-- END COL -->
 			<div class="col-sm-4 col-xs-12" data-aos="fade-up">
 				<div class="single-choose">
 					<i class="fa fa-thumbs-up"></i>
 					<h4>Best Price Guarantee</h4>
-					
+
 				</div>
-			</div><!-- END COL -->	
+			</div><!-- END COL -->
 		</div><!-- END ROW -->
-	</div><!-- END CONTAINER -->			
+	</div><!-- END CONTAINER -->
 </section>
 <!-- END WHY CHOOSE US -->
 
@@ -164,11 +172,11 @@
 					<!-- <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p> -->
 				</div>
 			</div><!-- END COL -->
-		</div><!-- END ROW -->						
+		</div><!-- END ROW -->
 		<div class="row text-center">
 			<div class="col-md-12" data-aos="fade-up">
 				<div id="package-slider" class="owl-carousel">
-					<div class="single_package"> 
+					<div class="single_package">
 						<img class="img-fluid" src="assets/img/package/1.jpg" alt="">
 						<h5 class="package-name">Ba Na Hill</h5>
 						<div class="package-hover">
@@ -183,7 +191,7 @@
 							<span class="time_zone">5 days 4 night</span>
 						</div>
 					</div><!-- END SINGLE PACKAGE -->
-					<div class="single_package"> 
+					<div class="single_package">
 						<img class="img-fluid" src="assets/img/package/2.jpg" alt="">
 						<h5 class="package-name">The Sun Whell</h5>
 						<div class="package-hover">
@@ -198,7 +206,7 @@
 							<span class="time_zone">5 days 4 night</span>
 						</div>
 					</div><!-- END SINGLE PACKAGE -->
-					<div class="single_package"> 
+					<div class="single_package">
 						<img class="img-fluid" src="assets/img/package/3.jpg" alt="">
 						<h5 class="package-name">La Vang Holy Land</h5>
 						<div class="package-hover">
@@ -213,7 +221,7 @@
 							<span class="time_zone">5 days 4 night</span>
 						</div>
 					</div><!-- END SINGLE PACKAGE -->
-					<div class="single_package"> 
+					<div class="single_package">
 						<img class="img-fluid" src="assets/img/package/4.jpg" alt="">
 						<h5 class="package-name">Asia Park</h5>
 						<div class="package-hover">
@@ -228,7 +236,7 @@
 							<span class="time_zone">5 days 4 night</span>
 						</div>
 					</div><!-- END SINGLE PACKAGE -->
-					<div class="single_package"> 
+					<div class="single_package">
 						<img class="img-fluid" src="assets/img/package/5.jpg" alt="">
 						<h5 class="package-name">Linh Ung temple</h5>
 						<div class="package-hover">
@@ -243,7 +251,7 @@
 							<span class="time_zone">5 days 4 night</span>
 						</div>
 					</div><!-- END SINGLE PACKAGE -->
-					<div class="single_package"> 
+					<div class="single_package">
 						<img class="img-fluid" src="assets/img/package/6.jpg" alt="">
 						<h5 class="package-name">Hoi An city</h5>
 						<div class="package-hover">
@@ -276,7 +284,7 @@
 					<p>Được mọi người bình chọn là những nơi đẹp nhất Đà Nẵng nói riêng, nước Việt Nam nói chung.</p>
 				</div>
 			</div><!-- END COL -->
-		</div><!-- END ROW -->				
+		</div><!-- END ROW -->
 		<div class="row" data-aos="fade-up">
 			<div class="col-sm-4 col-xs-12 no-padding">
 				<div class="grid">
@@ -285,7 +293,7 @@
 						<figcaption>
 							<h4>Beautifull Place</h4>
 							<p><a href="info.php">place detail</a></p>
-						</figcaption>			
+						</figcaption>
 					</figure>
 				</div><!--- END GRID -->
 			</div><!--- END COL -->
@@ -296,7 +304,7 @@
 						<figcaption>
 							<h4>Beautifull Place</h4>
 							<p><a href="info.php">place detail</a></p>
-						</figcaption>			
+						</figcaption>
 					</figure>
 				</div><!--- END GRID -->
 			</div><!--- END COL -->
@@ -307,7 +315,7 @@
 						<figcaption>
 							<h4>Beautifull Place</h4>
 							<p><a href="info.php">place detail</a></p>
-						</figcaption>			
+						</figcaption>
 					</figure>
 				</div><!--- END GRID -->
 			</div><!--- END COL -->
@@ -318,7 +326,7 @@
 						<figcaption>
 							<h4>Beautifull Place</h4>
 							<p><a href="info.php">place detail</a></p>
-						</figcaption>			
+						</figcaption>
 					</figure>
 				</div><!--- END GRID -->
 			</div><!--- END COL -->
@@ -329,7 +337,7 @@
 						<figcaption>
 							<h4>Beautifull Place</h4>
 							<p><a href="info.php">place detail</a></p>
-						</figcaption>			
+						</figcaption>
 					</figure>
 				</div><!--- END GRID -->
 			</div><!--- END COL -->
@@ -340,14 +348,14 @@
 						<figcaption>
 							<h4>Beautifull Place</h4>
 							<p><a href="info.php">place detail</a></p>
-						</figcaption>			
+						</figcaption>
 					</figure>
 				</div><!--- END GRID -->
 			</div><!--- END COL -->
-		</div><!--- END ROW -->				
+		</div><!--- END ROW -->
 	</div><!--- END CONTAINER-FLUID -->
 </section>
-<!-- END TOP DEALS -->				 
+<!-- END TOP DEALS -->
 
 
 
@@ -363,7 +371,7 @@
 					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
 				</div>
 			</div><!-- END COL -->
-		</div><!-- END ROW -->					
+		</div><!-- END ROW -->
 		<div class="row">
 			<div class="col-md-12" data-aos="fade-up">
 				<div id="gallery-slider" class="owl-carousel">
@@ -403,7 +411,7 @@
 <!-- END GALLERY -->
 
 <!-- START BLOG -->
-<section id="blog" class="blog_section">						
+<section id="blog" class="blog_section">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12" data-aos="fade-up">
@@ -413,12 +421,13 @@
 					<p>Share about you. we are one.</p>
 				</div>
 			</div><!-- END COL -->
-		</div><!-- END ROW -->	
-		<div class="row">	
+		</div><!-- END ROW -->
+		<div class="row">
 			<div class="col-lg-6" data-aos="fade-up">
 				<div class="single_blog">
 					<div class="blog-text wow fadeInLeft">
-						<h4><a href="blog.php?blog=<?php echo $blog->getId();?>">Blog of Me</a></h4>
+
+						<h4><a href="blog.php?blog=<?php echo $user->getUserId();?>">Blog of Me</a></h4>
 						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.
 						<p><strong> 25 August, 2017</strong></p>
 					</div>
@@ -428,7 +437,7 @@
 			<div class="col-lg-6" data-aos="fade-up">
 				<div class="single_blog">
 					<div class="blog-text wow fadeInLeft">
-						<h4><a href="blog.php">Blog title here</a></h4>
+						<h4><a href="blog.php?blog=<?php echo $user->getUserId();?>">Blog title here</a></h4>
 						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.
 						<p><strong> 26 August, 2017</strong></p>
 					</div>
@@ -438,7 +447,7 @@
 			<div class="col-lg-6" data-aos="fade-up">
 				<div class="single_blog">
 					<div class="blog-text wow fadeInRight">
-						<h4><a href="blog.php">Blog title here</a></h4>
+						<h4><a href="blog.php?blog=<?php echo $user->getUserId();?>">Blog title here</a></h4>
 						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.
 						<p><strong> 27 August, 2017</strong></p>
 					</div>
@@ -448,7 +457,7 @@
 			<div class="col-lg-6" data-aos="fade-up">
 				<div class="single_blog">
 					<div class="blog-text wow fadeInRight">
-						<h4><a href="blog.php">Blog title here</a></h4>
+						<h4><a href="blog.php?blog=<?php echo $user->getUserId();?>">Blog title here</a></h4>
 						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.
 						<p><strong> 28 August, 2017</strong></p>
 					</div>
@@ -457,7 +466,7 @@
 			</div><!--- END COL -->
 		</div><!--- END ROW -->
 	</div><!--- END CONTAINER -->
-</section> 
+</section>
 <!-- END BLOG -->
 
 <!-- START TESTIMONIAL -->
@@ -469,9 +478,9 @@
 					<h2>What our client say</h2>
 					<span></span>
 					<!-- <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p> -->
-				</div>	
+				</div>
 			</div><!-- END COL -->
-		</div><!-- END ROW -->					
+		</div><!-- END ROW -->
 		<div class="row">
 			<div class="col-md-12">
 				<div id="testimonial-slider" class="owl-carousel">
@@ -584,10 +593,10 @@
 <!-- START CONTACT FORM-->
 <section id="contact" class="contact_area">
 	<div class="container-fluid">
-		<div class="row">		
+		<div class="row">
 			<div class="col-lg-6 col-sm-12 col-xs-12 no-padding" data-aos="fade-up">
 				<div class="contact_address">
-					<h3>Contact Us</h3>				
+					<h3>Contact Us</h3>
 					<ul>
 						<li><i class="fa fa-rocket"></i>2369 Robinson Lane Jackson, OH 45640</li>
 						<li><i class="fa fa-phone"></i>(+84) 01674213940</li>
@@ -595,7 +604,7 @@
 						<li><i class="fa fa-clock-o"></i>Mon - Fri: 08.00 - 16.00</li>
 					</ul>
 				</div>
-			</div><!-- END COL -->						
+			</div><!-- END COL -->
 			<div class="col-lg-6 col-sm-12 col-xs-12 no-padding" data-aos="fade-up">
 				<div class="contact">
 					<form id="contact-form" method="post" enctype="multipart/form-data">
@@ -621,10 +630,10 @@
 					</form>
 				</div>
 			</div><!-- END COL -->
-		</div><!--- END ROW -->				
-	</div><!--- END CONTAINER -->	
+		</div><!--- END ROW -->
+	</div><!--- END CONTAINER -->
 </section>
-<!-- END CONTACT FORM -->	
+<!-- END CONTACT FORM -->
 
 <!-- START MAP -->
 <div id="map"></div>

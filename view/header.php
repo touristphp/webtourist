@@ -1,3 +1,11 @@
+<?php
+
+    include_once '../controller/UserController.php';
+
+    $user = new UserController();
+    session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,13 +37,14 @@
     <link rel="stylesheet" href="assets/css/flexslider.css">
     <!-- component CSS -->
     <link rel="stylesheet" href="assets/css/aos.css">
+
     <!-- Style CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" href="assets/css/quy.css">
     <link rel="stylesheet" href="assets/css/review.css">
      <!-- start link by Thanh -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"> -->
     <link rel="stylesheet" href="assets/css/login.css">
     <!-- end link by thanh -->
     <link rel="stylesheet" href="assets/css/info.css">
@@ -59,7 +68,7 @@
 
 
     <!-- START NAVBAR -->
-      <nav class="navbar navbar-toggleable-sm fixed-top navbar-light bg-faded site-navigation">
+      <nav class="navbar navbar-toggleable-sm fixed-top navbar-light bg-faded site-navigation" id="login_file">
       <div class="container">
         <a class="navbar-brand" href="index.php"><img src="assets/img/logo.png" alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -73,8 +82,20 @@
           <li class="nav-item"><a class="nav-link" href="#top_deals">Top place</a></li>
           <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
           <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
-          <li class="nav-item"><a class="nav-link" href="login.php">
-            Login  </a></li>
+          <li class="nav-item">
+              <?php
+
+                if ($user->checkUserLogged()) {
+                    ?><a class="nav-link" href="logout.php">
+                        <?php echo "Logout"; ?><?php
+
+                }
+                else {
+                    ?><a class="nav-link" href="login.php">
+                        <?php echo "Login"; ?><?php
+                }
+               ?>
+          </a></li>
         </ul>
         </div>
       </div>

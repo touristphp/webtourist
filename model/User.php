@@ -1,5 +1,7 @@
 <?php
+
 include_once '../controller/database/ConnectDatabase.php';
+
 
 /**
  * Created by PhpStorm.
@@ -10,10 +12,13 @@ include_once '../controller/database/ConnectDatabase.php';
 class User extends ConnectDatabase
 {
     private $db;
+    private $userId;
+
 
     public function __construct()
     {
         $this->db = $this->getConnect();
+        // $this->$userId = $_SESSION['id'];
     }
 
     /**
@@ -29,15 +34,14 @@ class User extends ConnectDatabase
 
 
     public function register($userName, $password){
+
         try{
+
             $newPasswordHashed = password_hash($password, PASSWORD_DEFAULT);
             $queryRegister = $this->db->prepare("INSERT INTO `webtourist`.`user` (`user_name`,`password`) VALUES (:userName, :password)");
             $queryRegister->bindparam(":userName", $userName);
             $queryRegister->bindparam(":password", $newPasswordHashed);
             $queryRegister->execute();
-
-            
-//            return $queryRegister;
 
         }
         catch (PDOException $e){
@@ -45,20 +49,25 @@ class User extends ConnectDatabase
         }
     }
 
-    public function login($userName, $password){
+    public function login($userName, $password)
+    {
         try{
+
             $hashedPassword = password_hash($password,PASSWORD_DEFAULT);
-            $queryLogin = $this->db->prepare("SELECT * FROM `webtourist`.`user` WHERE user_name=:userName");
-            $queryLogin->execute(array(':userName'=>$userName));
-            $userRow=$queryLogin->fetch(PDO::FETCH_ASSOC);
+            $queryLogin = $this->db->prepare("SELECT * FROM `webtourist`.`user` WHERE user_name = :userName");
+            $queryLogin->bindParam(':userName', $userName);
+            $queryLogin->execute();
+            $userRow = $queryLogin->fetch(PDO::FETCH_ASSOC);
+
             if($queryLogin->rowCount() > 0)
             {
-                if(password_verify(password, $userRow['user_pass']))
+                if(password_verify($password, $userRow['password']))
                 {
+                    session_start();
                     $_SESSION['user_name']=$userRow['user_name'];
                     $_SESSION['id'] = $userRow['id'];
 
-                    echo 'login success';
+
                     return true;
                 }
                 else
@@ -66,27 +75,21 @@ class User extends ConnectDatabase
                     return false;
                 }
             }
-//            $queryLogin->bindparam(":userName", $userName);
-//            $queryLogin->bindparam(":password",$hashedPassword);
-//            $queryLogin->execute();
-//            $count = $queryLogin->rowCount();
-//            $valueFromDB = $queryLogin->fetch(PDO::FETCH_OBJ);
-//
-//            if ($count){
-//                $_SESSION['user_name']=$valueFromDB->user_name;
-//                $_SESSION['id']=$valueFromDB->id;
-//                return true;
-//            }
-//            else{
-//                return false;
-//            }
-
         }
         catch (PDOException $exception){
             echo "ERROR db: ".$exception->getMessage();
         }
     }
 
+    public function getUserId()
+    {
+        if (isset($_SESSION['id'])) {
+            return $_SESSION['id'];
+        }
+        else {
+            return 0;
+        }
+    }
 
     public function is_loggedin()
     {
@@ -103,11 +106,18 @@ class User extends ConnectDatabase
 
     public function logout()
     {
-        session_destroy();
+
+        session_start();
         unset($_SESSION['user_name']);
-//        header("Location: login.php");
-        echo 'logout success';
-        return true;
+        unset($_SESSION['id']);
+        session_destroy();
+        echo "ok";
+        header("Location: /tourist/webtourist/view/login.php");
+
+
     }
 
 }
+// $a = new User();
+// $a->logout();
+// echo "unset session";

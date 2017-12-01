@@ -1,7 +1,8 @@
 <?php
 
-include 'UserController.php';
-include 'database/ConnectDatabase.php';
+// include 'database/ConnectDatabase.php';
+
+
 include_once '../model/Blog.php';
 
 /**
@@ -10,7 +11,8 @@ include_once '../model/Blog.php';
  * Date: 07/11/2017
  * Time: 16:55
  */
-class BlogController 
+
+class BlogController
 {
 
     public $blog;
@@ -42,7 +44,7 @@ class BlogController
         return $content;
 
     }
-    
+
     public function getId($id=0){
         $getId = $this->blog->getId($id);
         echo $getId;
@@ -66,5 +68,3 @@ class BlogController
 }
 $aa = new BlogController();
 $aa->invoke();
-
-

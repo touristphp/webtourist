@@ -1,19 +1,24 @@
-<?php include 'header.php';
-  include_once '../controller/HomeController.php';
-//  $dir = $_SERVER['HTTP_HOST'];
-//print_r($dir."/tourist/webtourist/view/")
+<?php
+
+include 'header.php';
+
+include_once '../controller/UserController.php';
+
 ?>
 <?php
-      $user = new HomeController();
 
-      if (isset($_POST['submitLogin'])){
+      $user = new UserController();
+
+      if (isset($_POST['submitLogin'])) {
           $usernameLogin = $_POST['usernameLogin'];
           $passwordLogin = $_POST['passwordLogin'];
+
           if ($user->login($usernameLogin, $passwordLogin)){
-              echo 'login success2';
+
               header("Location: /tourist/webtourist/view/");
           }
           else{
+              echo 'not login';
 
           }
 
@@ -21,11 +26,11 @@
       }
     if(isset($_POST['register'])) {
       $username = $_POST['usernameRegister'];
-      $password = $_POST['PasswordRegister'];
-       exit;
+      $password = $_POST['passwordRegister'];
 
       try{
         $user->register($username,$password);
+        header("Location: /tourist/webtourist/view/");
       }
       catch (PDOException $e){
         echo "E: ".$e->getMessage();
@@ -33,9 +38,7 @@
 
     }
 ?>
-<?php
-  session_start();
-?>
+
   <div class="logmod ">
   <div class="logmod__wrapper">
     <span class="logmod__close">Close</span>
@@ -60,11 +63,11 @@
             <div class="sminputs">
               <div class="input string optional">
                 <label class="string optional" for="user-pw">Password *</label>
-                <input class="string optional" maxlength="255" id="user-pw" placeholder="PasswordRegister" type="password" size="50" />
+                <input class="string optional" maxlength="255" id="user-pw" name="passwordRegister" placeholder="PasswordRegister" type="password" size="50" />
               </div>
               <div class="input string optional">
                 <label class="string optional" for="user-pw-repeat">Repeat password *</label>
-                <input class="string optional" maxlength="255" id="user-pw-repeat" placeholder="Repeat password" type="password" size="50" />
+                <input class="string optional" maxlength="255" id="user-pw-repeat" name="passwordRegisterRepeat" placeholder="Repeat password" type="password" size="50" />
               </div>
             </div>
             <div class="simform__actions">
@@ -103,14 +106,14 @@
           <form accept-charset="utf-8" action="" class="simform" method="POST" autocomplete="off">
             <div class="sminputs">
               <div class="input full">
-                <label class="string optional" name="usernameLogin" for="user-name">UserName*</label>
-                <input class="string optional" maxlength="255" id="user-email" placeholder="User Name" type="text" size="50" />
+                <label class="string optional" for="user-name">UserName*</label>
+                <input class="string optional" name="usernameLogin" maxlength="255" id="user-email" placeholder="User Name" type="text" size="50" />
               </div>
             </div>
             <div class="sminputs">
               <div class="input full">
-                <label class="string optional" name="passwordLogin" for="user-pw">Password *</label>
-                <input class="string optional" maxlength="255" id="user-pw" placeholder="Password" type="password" size="50" />
+                <label class="string optional" for="user-pw">Password *</label>
+                <input class="string optional" name="passwordLogin" maxlength="255" id="user-pw" placeholder="Password" type="password" size="50" />
                 						<span class="hide-password">Show</span>
               </div>
             </div>
