@@ -14,7 +14,7 @@ html {
   bottom: 0;
   left: 0;
   opacity: 1;
-  background: rgba(0, 0, 0, 0.2);
+  /* background: rgba(0, 0, 0, 0.2); */
   z-index: 1;
 }
 .logmod::after {
@@ -312,7 +312,7 @@ html {
   font-size: 16px;
   line-height: 24px;
   font-family: "Lato", sans-serif;
-  background: rgba(0, 0, 0, 0.2);
+  /* background: rgba(0, 0, 0, 0.2); */
 }
 
 .btn, .simform__actions .sumbit {
@@ -607,4 +607,7 @@ html {
   height: 100%;
   z-index: 999999;
   background-image: url(https://basehold.it/i/24);
+}
+nav#login_file {
+    background: rgba(0, 0, 0, 0.1);
 }

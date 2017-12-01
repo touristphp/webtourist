@@ -35,14 +35,15 @@ class Blog extends ConnectDatabase{
   */
  public function getId($id=0)
  {
-//  $this->id = $this->getConnect()->query("SELECT id FROM blog LIMIT 1");
-  $valueFormQuery = $this->getArrayData();
-  foreach ($valueFormQuery as $key =>  $value){
 
-   if ($key==$id){
-    $this->id = $value['id'];
-   }
-  }
+//  $this->id = $this->getConnect()->query("SELECT id FROM blog LIMIT 1");
+  // $valueFormQuery = $this->getArrayData();
+  // foreach ($valueFormQuery as $key =>  $value){
+  //
+  //  if ($key==$id){
+  //   $this->id = $value['id'];
+  //  }
+  // }
   return $this->id;
  }
 
@@ -60,7 +61,7 @@ class Blog extends ConnectDatabase{
   $value->execute();
   $result = $value->fetchAll();
   foreach ($result as $key =>  $value){
-   if ($key==$id){
+   if ($key==($id-1)){
     $this->content = $value['content'];
    }
   }
@@ -75,7 +76,7 @@ class Blog extends ConnectDatabase{
  {
   $valueFormQuery = $this->getArrayData();
   foreach ($valueFormQuery as $key =>  $value){
-   if ($key==$id){
+   if ($key==($id-1)){
     $this->createdAt = date("d-m-Y", strtotime($value['created_at']));
    }
   }
@@ -96,7 +97,7 @@ class Blog extends ConnectDatabase{
   $valueFormQuery = $this->getArrayData();
   foreach ($valueFormQuery as $key =>  $value){
 
-   if ($key==$id){
+   if ($key==($id-1)){
     $this->image = $value['image'];
    }
   }
@@ -111,13 +112,13 @@ class Blog extends ConnectDatabase{
   $valueFormQuery = $this->getArrayData();
   foreach ($valueFormQuery as $key =>  $value){
 
-   if ($key==$id){
+   if ($key==($id-1)){
     $this->title = $value['title'];
    }
   }
   return $this->title;
  }
 
-	
+
 }
  ?>

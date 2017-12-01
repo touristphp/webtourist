@@ -1,6 +1,10 @@
 <?php include_once 'header.php';?>
+
 <?php
+
 require_once '../controller/BlogController.php';
+
+
 //class Review{
 //
 //}
@@ -9,8 +13,6 @@ $blog = new BlogController();
 $urlBlogId = $blog->invoke();
 $blog->getContent();
 
-session_start();
-echo $_SESSION['id'];
 //$getId = $blog->getBlog();
 ?>
 
@@ -44,7 +46,7 @@ echo $_SESSION['id'];
                             <div class="single_author">
                                 <img src="assets/img/blog/author.jpg" alt="" />
                                 <h4>Syed Ekram</h4>
-                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ultricies quam nisi, vel gravida enim accumsan id. Praesent justo quam, auctor et lorem in, pulvinar ornare orci.</p> 
+                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ultricies quam nisi, vel gravida enim accumsan id. Praesent justo quam, auctor et lorem in, pulvinar ornare orci.</p>
                             </div>
                         </div><!--- END AUTHOR PART -->
                         <div class="comments_part">
@@ -59,7 +61,7 @@ echo $_SESSION['id'];
                                 <h4>Sharmin Sheila</h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ultricies quam nisi, vel gravida enim accumsan id. Praesent justo quam, auctor et lorem in, pulvinar ornare orci.</p>
                             </div><!--- END SINGLE COMMENT -->
-                        </div><!--- END COMMENTS PART -->   
+                        </div><!--- END COMMENTS PART -->
                         <div class="comment_form">
                             <h3 class="blog_head_title">Add a Comment</h3>
                             <div class="contact comment-box">
@@ -85,7 +87,7 @@ echo $_SESSION['id'];
                                 </div>
                             </form>
                         </div>
-                        </div><!--- END COMMENT FORM -->                        
+                        </div><!--- END COMMENT FORM -->
                     </div><!--- END COL -->
                     <div class="col-md-4 col-sm-4 col-xs-12">
                         <div class="search wow fadeInRight">
@@ -101,17 +103,17 @@ echo $_SESSION['id'];
                                 <li><a href="#"><i class="fa fa-caret-right"></i> Branding</a></li>
                                 <li><a href="#"><i class="fa fa-caret-right"></i> Marketing</a></li>
                             </ul>
-                        </div>                  
+                        </div>
                         <div class="video_post wow fadeInRight">
                             <h4 class="blog_sidebar_title">Video Widget</h4>
-                            <iframe src="https://player.vimeo.com/video/62022718"></iframe>         
+                            <iframe src="https://player.vimeo.com/video/62022718"></iframe>
                         </div>
                         <div class="tag">
                             <h4 class="blog_sidebar_title">Tag cloud</h4>
                             <a class="btn btn-default btn-tag-bg" href="#">Travel</a>
                             <a class="btn btn-default btn-tag-bg" href="#">tour</a>
                             <a class="btn btn-default btn-tag-bg" href="#">portfolio</a>
-                            <a class="btn btn-default btn-tag-bg" href="#">Photopgraphy</a>     
+                            <a class="btn btn-default btn-tag-bg" href="#">Photopgraphy</a>
                             <a class="btn btn-default btn-tag-bg" href="#">Responsive</a>
                             <a class="btn btn-default btn-tag-bg" href="#">agency</a>
                         </div>
