@@ -2,8 +2,8 @@
 
 // include 'database/ConnectDatabase.php';
 
-
 include_once '../model/Blog.php';
+include '../model/Like.php';
 
 /**
  * Created by PhpStorm.
@@ -66,5 +66,29 @@ class BlogController
     }
 
 }
-$aa = new BlogController();
-$aa->invoke();
+
+$likeObject = new Like();
+$returnUnlikeToLike = NULL;
+$returnlikeToUnLike = NULL;
+
+    if (isset($_POST['user_id']) && !empty($_POST["user_id"])) {
+
+        $userIdAjax = $_POST['user_id'];
+        $blogIdAjax = $_POST['blog_id'];
+        $valueButton = $_POST['value'];
+
+        if ($valueButton == "unlike"){
+            $likeObject->buttonLike($userIdAjax,$blogIdAjax);
+            $returnUnlikeToLike = "true";
+            // $arr = array('a' => 1, 'b' => 2, 'c' => 3, 'd' => 4, 'e' => 5);
+            //
+            // echo json_encode($arr);
+            echo json_encode($returnUnlikeToLike);
+        }
+        if ($valueButton == "like") {
+            $likeObject->buttonUnLike($userIdAjax,$blogIdAjax);
+            $returnUnlikeToLike = "false";
+            echo json_encode($returnUnlikeToLike);
+        }
+
+    }

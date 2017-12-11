@@ -37,7 +37,10 @@ $blog->getContent();
                         <div class="blog_content">
                             <h1 class="date"><?php echo $blog->getCreatedAt($urlBlogId); ?></h1>
                             <h2 class="title"><?php echo $blog->getTitle($urlBlogId); ?></h2>
-                            <h4><span>03 Comments </span> <span>200 Views </span> <span>17 Likes </span></h4>
+                            <h4>
+                                <span ><i class="material-icons like_blog test">thumb_up</i> 17 Like </span>
+                                <span>03 Comments </span> <span>200 Views </span>
+                            </h4>
                             <img src="<?php echo $blog->getImage($urlBlogId); ?>" class="img-responsive" alt="image" />
                             <p><?php echo $blog->getContent($urlBlogId);?></p>
                         </div>

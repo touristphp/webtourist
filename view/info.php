@@ -1,6 +1,8 @@
 <?php include_once 'header.php';?>
+
 <?php
-require_once '../controller/PlaceController.php';
+
+require_once '../controller/PlaceController.php';die('aa');
 $place      = new PlaceController();
 $urlPlaceId = $place->invoke();
 

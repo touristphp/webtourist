@@ -1,5 +1,5 @@
 	<?php
-include 'UserController.php';
+// include 'UserController.php';
 include 'database/ConnectDatabase.php';
 include_once '../model/Place.php';
 /**

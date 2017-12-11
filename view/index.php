@@ -427,7 +427,7 @@
 				<div class="single_blog">
 					<div class="blog-text wow fadeInLeft">
 
-						<h4><a href="blog.php?blog=<?php echo $user->getUserId();?>">Blog of Me</a></h4>
+						<h4><a href="blog.php?blog=1">Blog of Me</a></h4>
 						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.
 						<p><strong> 25 August, 2017</strong></p>
 					</div>
@@ -457,7 +457,7 @@
 			<div class="col-lg-6" data-aos="fade-up">
 				<div class="single_blog">
 					<div class="blog-text wow fadeInRight">
-						<h4><a href="blog.php?blog=<?php echo $user->getUserId();?>">Blog title here</a></h4>
+						<h4><a href="blog.php?blog=3">Blog title here</a></h4>
 						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.
 						<p><strong> 28 August, 2017</strong></p>
 					</div>
