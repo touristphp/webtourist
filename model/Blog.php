@@ -30,23 +30,6 @@ class Blog extends ConnectDatabase{
 
  }
 
- /**
-  * @return mixed
-  */
- public function getId($id=0)
- {
-
-//  $this->id = $this->getConnect()->query("SELECT id FROM blog LIMIT 1");
-  // $valueFormQuery = $this->getArrayData();
-  // foreach ($valueFormQuery as $key =>  $value){
-  //
-  //  if ($key==$id){
-  //   $this->id = $value['id'];
-  //  }
-  // }
-  return $this->id;
- }
-
  public function getValueIdInURL($user_id){
 
  }
@@ -102,6 +85,19 @@ class Blog extends ConnectDatabase{
    }
   }
   return $this->image;
+ }
+
+
+ public function getId($id=0)
+ {
+     // $this->id = $this->getConnect()->query("SELECT id FROM blog LIMIT 1");
+      $valueFormQuery = $this->getArrayData();
+      foreach ($valueFormQuery as $key =>  $value){
+       if ($key==($id-1)){
+        $this->id = $value['id'];
+       }
+      }
+      return $this->id;
  }
 
  /**

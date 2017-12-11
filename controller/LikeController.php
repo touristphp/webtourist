@@ -1,48 +1,43 @@
 <?php
 
-// include 'UserController.php';
-// include 'BlogController.php';
-include 'database/ConnectDatabase.php';
+include_once '../model/Like.php';
 
 
-class LikeController extends ConnectDatabase
+class LikeController
 {
-	private $checkLike;
-	private $totalLike;
+	private $like;
 
-	/**
-     * @return mixed
-     */
-    public function getConnect()
+	public function __construct()
     {
-        $connect = $this->connect();
-        return $connect;
-
-    }
-    
-
-	 /**
-     * @return mixed
-     */
-    public function getArrayData()
-    {
-        $connect = $this->connect();
-        $data = $connect->query("SELECT count(user_id) as 'sum'  FROM webtourist.`like` where blog_id = 1;");
-        return $data;
-
+        $this->$like = new Like();
     }
 
-    public function getDataaaa(){
-    	$dataArr = $this->getArrayData();
-
-    	foreach ($dataArr as $key => $value) {
-    		echo $value[0];
-    	}
-
+    public function checkLiked($userId, $blogId){
+		return $this->$like->checkLiked($userId, $blogId);
     }
+
+	public function clickButtonUnLike($userId, $blogId)
+	{
+		return $this->$like->buttonUnLike($userId, $blogId);
+	}
+
+	public function clickButtonUnLike($userId, $blogId)
+	{
+		return $this->$like->buttonLike($userId, $blogId);
+	}
 
 }
-// echo 'string';
-
-$like = new LikeController();
-echo $like->getDataaaa();
+// $likeobj = new Like();
+// $arrayData = array();
+// if(isset($_POST['blog_id'])) {
+// 	$blogId = $_POST['blog_id']);
+// 	$userId = $_POST['user_id']);
+//   if ($likeobj->checkLiked($userId,$blogId)) {
+//   	$arrayData['liked'] = "true";
+//
+//   }
+//   else {
+//   	$arrayData['liked'] = "false";
+//   }
+//
+// }

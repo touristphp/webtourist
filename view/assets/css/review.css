@@ -32,12 +32,7 @@ a.nav-link.active.button-review {
     margin-left: -15px;
     padding-left: 35px;
 }
-i.material-icons {
-    position: relative;
-    top: 5px;
-    right: 5px;
-    color: #f9461d;
-}
+
 a.nav-link.active.button-review {
     color: #f9461d  !important;
 }
@@ -65,5 +60,23 @@ input#submitBlog {
     float: right;
 }
 #first-email, #subject  {
-    width: 94%; 
+    width: 94%;
+}
+/*i.material-icons.like_blog{
+    position: relative;
+    top: 5px;
+    right: 5px;
+    color: #f9461d;
+}*/
+.material-icons.like_blog.test {
+    position: relative;
+    top: 5px;
+    right: 5px;
+    color: #f9461d;
+}
+.material-icons.like_blog{
+    position: relative;
+    top: 5px;
+    right: 5px;
+    color: rgb(0, 178, 115);
 }
