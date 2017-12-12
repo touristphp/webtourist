@@ -41,6 +41,14 @@
         public function test(){
         	echo 'quydeptrai';
         }
+        public function totalLike($blog =1){
+            $data = "SELECT  COUNT(blog_id) AS total FROM webtourist.`like` where blog_id =".$blog;
+            $connect = $this->connect();
+            $queryLogin = $connect->query($data);
+            $queryLogin->execute();
+            $userRow = $queryLogin->fetchColumn();
+            return $userRow;
+        }
 
         public function checkLiked($user, $blog)
         {

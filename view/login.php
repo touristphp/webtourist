@@ -15,7 +15,7 @@ include_once '../controller/UserController.php';
 
           if ($user->login($usernameLogin, $passwordLogin)){
 
-              header("Location: /tourist/webtourist/view/");
+              header("Location: /tourist_test/webtourist/view/");
           }
           else{
               echo 'not login';
@@ -30,7 +30,7 @@ include_once '../controller/UserController.php';
 
       try{
         $user->register($username,$password);
-        header("Location: /tourist/webtourist/view/");
+        header("Location: /tourist_test/webtourist/view/");
       }
       catch (PDOException $e){
         echo "E: ".$e->getMessage();

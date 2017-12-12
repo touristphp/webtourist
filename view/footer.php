@@ -77,7 +77,7 @@ else {
 
            $('.like_blog').removeAttr('id');
            $('.like_blog').attr( "id", "like" );
-           $('#like').removeClass('material-icons like_blog');
+           $('#like').removeClass('material-icons like_blog unlike');
            $('#like').addClass('material-icons like_blog  test');
        }
        else {
@@ -85,7 +85,7 @@ else {
            $('.like_blog').removeAttr('id');
            $('.like_blog').attr( "id", "unlike" );
            $('#unlike').removeClass('material-icons like_blog test');
-           $('#unlike').addClass('material-icons like_blog');
+           $('#unlike').addClass('material-icons like_blog unlike');
        }
 
         // unlike to like
@@ -97,7 +97,7 @@ else {
                 "blog_id": "<?= $_GET['blog'] ?>",
                 "value": idElement
             };
-            
+
             $.ajax({
                 type: 'POST',
                 url: '../controller/BlogController.php',
@@ -108,7 +108,7 @@ else {
                     $('.like_blog').removeAttr('id');
                     $('.like_blog').attr( "id", "unlike" );
                     $('#unlike').removeClass('material-icons like_blog test');
-                    $('#unlike').addClass('material-icons like_blog');
+                    $('#unlike').addClass('material-icons like_blog unlike');
                 }
             });
         });
@@ -131,7 +131,7 @@ else {
 
                     $('.like_blog').removeAttr('id');
                     $('.like_blog').attr( "id", "like" );
-                    $('#like').removeClass('material-icons like_blog');
+                    $('#like').removeClass('material-icons like_blog unlike');
                     $('#like').addClass('material-icons like_blog  test');
                 }
             });
