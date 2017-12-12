@@ -3,6 +3,7 @@
 <?php
 
 require_once '../controller/BlogController.php';
+require_once '../model/Like.php';
 
 
 //class Review{
@@ -14,6 +15,8 @@ $urlBlogId = $blog->invoke();
 $blog->getContent();
 
 //$getId = $blog->getBlog();
+$like = new Like();
+
 ?>
 
 
@@ -38,7 +41,7 @@ $blog->getContent();
                             <h1 class="date"><?php echo $blog->getCreatedAt($urlBlogId); ?></h1>
                             <h2 class="title"><?php echo $blog->getTitle($urlBlogId); ?></h2>
                             <h4>
-                                <span ><i class="material-icons like_blog test">thumb_up</i> 17 Like </span>
+                                <span ><i class="material-icons like_blog test">thumb_up</i> <span class="total_like"><?php echo $like->totalLike($_GET['blog']);?></span>Like </span>
                                 <span>03 Comments </span> <span>200 Views </span>
                             </h4>
                             <img src="<?php echo $blog->getImage($urlBlogId); ?>" class="img-responsive" alt="image" />

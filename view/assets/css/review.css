@@ -74,9 +74,10 @@ input#submitBlog {
     right: 5px;
     color: #f9461d;
 }
-.material-icons.like_blog{
+.material-icons.like_blog.unlike{
     position: relative;
     top: 5px;
-    right: 5px;
+    right: -5px;
     color: rgb(0, 178, 115);
 }
+span.total_like {position: relative;left: 20px;}
