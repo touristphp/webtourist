@@ -9,6 +9,7 @@ else {
     $test = false;
 
 }
+var_dump($test);
 //
 // var_dump($_SESSION['id']);
 // var_dump($_GET['blog']);
@@ -72,70 +73,83 @@ else {
     $(document).ready(function(){
 
         var element = "<?php echo $test; ?>";
-
-       if (element == true) {
+        if (element == true) {
 
            $('.like_blog').removeAttr('id');
            $('.like_blog').attr( "id", "like" );
            $('#like').removeClass('material-icons like_blog unlike');
            $('#like').addClass('material-icons like_blog  test');
-       }
-       else {
+        }
+        else {
 
            $('.like_blog').removeAttr('id');
            $('.like_blog').attr( "id", "unlike" );
            $('#unlike').removeClass('material-icons like_blog test');
            $('#unlike').addClass('material-icons like_blog unlike');
-       }
+        }
 
-        // unlike to like
-        $("#like").click(function(){
-            var valueCheckLike;
+
+       $('#thanh_tuong_tac').on('click', "i.test", function() {
+           var valueCheckLike;
+            // var total = "null";
+
             var idElement = $(this).attr('id');
+
             var data1 = {
                 "user_id": "<?= $_SESSION['id'] ?>",
                 "blog_id": "<?= $_GET['blog'] ?>",
                 "value": idElement
             };
+           var reference = this;
+           alert("1");
 
-            $.ajax({
-                type: 'POST',
-                url: '../controller/BlogController.php',
-                data: data1,
-                success: function(data) {
-                    valueCheckLike = data;
-                    // alert(valueCheckLike);
-                    $('.like_blog').removeAttr('id');
-                    $('.like_blog').attr( "id", "unlike" );
-                    $('#unlike').removeClass('material-icons like_blog test');
-                    $('#unlike').addClass('material-icons like_blog unlike');
-                }
-            });
-        });
-        //  like to unlike
-        $("#unlike").click(function(){
-            var valueCheckUnLike;
-            var idElementUnLike = $(this).attr('id');
-            var dataUnLike = {
-                "user_id": "<?= $_SESSION['id'] ?>",
-                "blog_id": "<?= $_GET['blog'] ?>",
-                "value": idElementUnLike
-            };
 
-            $.ajax({
-                type: 'POST',
-                url: '../controller/BlogController.php',
-                data: dataUnLike,
-                success: function(data) {
-                    valueCheckUnLike = data;
+           $(reference).removeClass('material-icons like_blog test');
+           $(reference).addClass('material-icons like_blog unlike');
+           $.ajax({
+               type: 'POST',
+               url: '../controller/BlogController.php',
+               dataType: "json",
+               contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+               data: data1,
+               success: function(data) {
+                   valueCheckLike = data;
 
-                    $('.like_blog').removeAttr('id');
-                    $('.like_blog').attr( "id", "like" );
-                    $('#like').removeClass('material-icons like_blog unlike');
-                    $('#like').addClass('material-icons like_blog  test');
-                }
-            });
-        });
+                   $('.total_like').empty();
+                   $('.total_like').text(data[0].resetLiked);
+               }
+           });
+           $('.like_blog').removeAttr('id');
+           $('.like_blog').attr( "id", "unlike" );
+       }).on('click' , "i.unlike", function() {
+           var idElement = $(this).attr('id');
+
+           var data1 = {
+               "user_id": "<?= $_SESSION['id'] ?>",
+               "blog_id": "<?= $_GET['blog'] ?>",
+               "value": idElement
+           };
+
+           var reference = this;
+           alert("2");
+           $('.like_blog').removeAttr('id');
+           $('.like_blog').attr( "id", "like" );
+           $(reference).removeClass('material-icons like_blog unlike');
+           $(reference).addClass('material-icons like_blog  test');
+           $.ajax({
+               type: 'POST',
+               url: '../controller/BlogController.php',
+               dataType: "json",
+               contentType:"application/x-www-form-urlencoded; charset=UTF-8",
+               data: data1,
+               success: function(data) {
+                   valueCheckLike = data;
+
+                   $('.total_like').empty();
+                   $('.total_like').text(data[0].resetLiked);
+               }
+           });
+       });
     });
 
 </script>

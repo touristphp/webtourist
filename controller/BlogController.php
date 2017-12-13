@@ -68,8 +68,8 @@ class BlogController
 }
 
 $likeObject = new Like();
-$returnUnlikeToLike = NULL;
-$returnlikeToUnLike = NULL;
+// $return_arr = array();
+// $return_arr1 = array();
 
     if (isset($_POST['user_id']) && !empty($_POST["user_id"])) {
 
@@ -79,16 +79,21 @@ $returnlikeToUnLike = NULL;
 
         if ($valueButton == "unlike"){
             $likeObject->buttonLike($userIdAjax,$blogIdAjax);
-            $returnUnlikeToLike = "true";
+            $numberLike = $likeObject->totalLike($blogIdAjax);
+            $return_arr[] = array('resetLiked' => $numberLike );
+
+            // $returnUnlikeToLike = "true";
             // $arr = array('a' => 1, 'b' => 2, 'c' => 3, 'd' => 4, 'e' => 5);
             //
             // echo json_encode($arr);
-            echo json_encode($returnUnlikeToLike);
+            echo json_encode($return_arr);
         }
         if ($valueButton == "like") {
             $likeObject->buttonUnLike($userIdAjax,$blogIdAjax);
-            $returnUnlikeToLike = "false";
-            echo json_encode($returnUnlikeToLike);
+            // $returnUnlikeToLike = "false";
+            $numberLike = $likeObject->totalLike($blogIdAjax);
+            $return_arr1[] = array('resetLiked' => $numberLike );
+            echo json_encode($return_arr1);
         }
 
     }

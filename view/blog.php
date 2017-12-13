@@ -41,8 +41,14 @@ $like = new Like();
                             <h1 class="date"><?php echo $blog->getCreatedAt($urlBlogId); ?></h1>
                             <h2 class="title"><?php echo $blog->getTitle($urlBlogId); ?></h2>
                             <h4>
-                                <span ><i class="material-icons like_blog test">thumb_up</i> <span class="total_like"><?php echo $like->totalLike($_GET['blog']);?></span>Like </span>
-                                <span>03 Comments </span> <span>200 Views </span>
+                                <div id="thanh_tuong_tac">
+                                    <div id="btLike">
+                                        <span ><i id="ok" class="material-icons like_blog test">thumb_up</i> <span class="total_like"><?php echo $like->totalLike($_GET['blog']);?></span>Like </span>
+                                    </div>
+                                    <div class="">
+                                        <span>03 Comments </span> <span>200 Views </span>
+                                    </div>
+                                </div>
                             </h4>
                             <img src="<?php echo $blog->getImage($urlBlogId); ?>" class="img-responsive" alt="image" />
                             <p><?php echo $blog->getContent($urlBlogId);?></p>

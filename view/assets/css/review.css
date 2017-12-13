@@ -68,6 +68,9 @@ input#submitBlog {
     right: 5px;
     color: #f9461d;
 }*/
+#thanh_tuong_tac{
+    display: flex;
+}
 .material-icons.like_blog.test {
     position: relative;
     top: 5px;

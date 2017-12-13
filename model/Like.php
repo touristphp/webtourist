@@ -58,7 +58,7 @@
         	foreach ($dataArr as $key => $value) {
                 if ($value['blog_id'] == $blog) {
                     if ($value['user_id'] == $user) {
-                        $checkLiked = true; break;
+                        $checkLiked = true; 
                     }
                     else {
                         $checkLiked = false;
